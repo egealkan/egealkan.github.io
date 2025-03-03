@@ -1,0 +1,23 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-primary-dark text-text-primary font-sans;
+  }
+}
+
+@layer components {
+  .game-card {
+    @apply bg-primary-light border border-gray-700 rounded-lg p-6 hover:border-accent-primary/30 transition-all duration-300;
+  }
+  .skill-badge {
+    @apply px-3 py-1 rounded-full text-sm bg-primary-light border border-gray-700;
+  }
+  .accent-gradient {
+    @apply bg-gradient-to-r from-blue-500 to-accent-primary;
+  }
+}

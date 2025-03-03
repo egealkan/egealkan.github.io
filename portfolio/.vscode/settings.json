@@ -1,0 +1,17 @@
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "tailwindCSS.includeLanguages": {
+      "javascript": "javascript",
+      "typescript": "typescript",
+      "javascriptreact": "javascriptreact",
+      "typescriptreact": "typescriptreact"
+    },
+    "emmet.includeLanguages": {
+      "javascriptreact": "javascriptreact",
+      "typescriptreact": "typescriptreact"
+    }
+  }
