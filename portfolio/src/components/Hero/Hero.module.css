@@ -1,0 +1,225 @@
+.heroSection {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 0 80px;
+    position: relative;
+  }
+  
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 800px;
+  }
+  
+  .levelBadge {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .levelText {
+    background-color: rgba(100, 255, 218, 0.2);
+    color: var(--color-teal);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  
+  .progressBar {
+    width: 100px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background-color: var(--color-teal);
+    transition: width 0.3s ease;
+  }
+  
+  .title {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    position: relative;
+    animation: slideUp 0.5s ease 0.2s both;
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: var(--color-teal);
+    vertical-align: text-top;
+    margin-left: 2px;
+  }
+  
+  .blinking {
+    animation: pulse 1s infinite;
+  }
+  
+  .subtitle {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-slate);
+    margin-bottom: 24px;
+    animation: slideUp 0.5s ease 0.4s both;
+  }
+  
+  .description {
+    font-size: 18px;
+    color: var(--color-slate);
+    max-width: 540px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+    animation: slideUp 0.5s ease 0.6s both;
+  }
+  
+  .buttonsWrapper {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+    animation: slideUp 0.5s ease 0.8s both;
+  }
+  
+  .primaryButton {
+    background-color: var(--color-teal);
+    color: var(--color-navy-dark);
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+  }
+  
+  .secondaryButton {
+    background-color: transparent;
+    color: var(--color-white);
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .secondaryButton:hover {
+    border-color: var(--color-teal);
+    transform: translateY(-2px);
+  }
+  
+  .scrollIndicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease 1.5s both;
+  }
+  
+  .scrollText {
+    color: var(--color-slate);
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .mouseIcon {
+    width: 24px;
+    height: 40px;
+    border: 2px solid var(--color-slate);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .mouseWheel {
+    width: 4px;
+    height: 8px;
+    background-color: var(--color-teal);
+    border-radius: 2px;
+    margin-top: 8px;
+    animation: bounce 2s infinite;
+  }
+  
+  .characterCard {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    animation: fadeIn 1s ease 1s both;
+  }
+  
+  .cardBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(100, 255, 218, 0.3);
+    border-radius: 8px;
+    background-color: rgba(23, 42, 70, 0.5);
+  }
+  
+  .backgroundRotate1 {
+    transform: rotate(12deg);
+  }
+  
+  .backgroundRotate2 {
+    transform: rotate(-6deg);
+  }
+  
+  .cardContent {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-navy-light);
+    border: 2px solid rgba(100, 255, 218, 0.5);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  
+  @media (max-width: 768px) {
+    .heroSection {
+      padding: 100px 0 60px;
+      text-align: center;
+    }
+    
+    .contentWrapper {
+      align-items: center;
+    }
+    
+    .characterCard {
+      margin: 40px auto 0;
+    }
+    
+    .title {
+      font-size: 48px;
+    }
+    
+    .subtitle {
+      font-size: 24px;
+    }
+    
+    .buttonsWrapper {
+      flex-direction: column;
+    }
+  }
