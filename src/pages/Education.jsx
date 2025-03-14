@@ -17,7 +17,7 @@ const Education = () => {
     {
       university: 'University of Victoria',
       degree: 'Computer Science',
-      period: '2019 - 2022',
+      period: '2019 - 2022 (Not Completed)',
       location: 'Victoria, Canada',
       skills: {
         fundamentals: ['C', 'Statistics', 'Computer Architecture', 'Academic Writing', 'Algorithms', 'Data Structures'],
