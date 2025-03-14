@@ -1,0 +1,28 @@
+:root {
+    /* Color palette (keeping your color scheme) */
+    --color-navy-dark: #010813;
+    --color-navy-light: #172A46;
+    --color-teal: #64FFDA;
+    --color-slate: #8892B0;
+    --color-white: #E6F1FF;
+    
+    /* Font families */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Fira Code', 'JetBrains Mono', monospace;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+    
+    /* Transitions */
+    --transition-standard: all 0.3s ease;
+    
+    /* Border radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+  }

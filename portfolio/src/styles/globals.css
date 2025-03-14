@@ -1,0 +1,327 @@
+@import './variables.css';
+/* Easter Egg Hint */
+.easter-egg-hint {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.7rem;
+    color: var(--color-slate);
+    opacity: 0.4;
+    cursor: default;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+  }
+  
+  .easter-egg-hint:hover {
+    opacity: 1;
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--color-navy-dark);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  /* Theme Modes */
+  .light-mode {
+    --color-navy-dark: var(--color-light-bg);
+    --color-navy-light: var(--color-light-card);
+    --color-white: var(--color-light-text);
+    --color-slate: #6a7280;
+    --color-teal: var(--color-light-accent);
+  }
+  
+  /* Easter Egg */
+  .konami-easter-egg {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .konami-content {
+    background-color: var(--color-navy-light);
+    border: 2px solid var(--color-teal);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    text-align: center;
+    max-width: 500px;
+    position: relative;
+    animation: bounceIn 0.5s ease;
+  }
+  
+  .konami-content h3 {
+    color: var(--color-teal);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  .konami-animation {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 2rem;
+    animation: spin 2s infinite linear;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  section {
+    padding: var(--spacing-xxl) 0;
+  }
+  
+  button {
+    cursor: pointer;
+    font-family: var(--font-sans);
+  }
+  
+  /* Container class for consistent width */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+  }
+  
+  /* Grid layouts */
+  .grid {
+    display: grid;
+    gap: var(--spacing-lg);
+  }
+  
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Flex utilities */
+  .flex {
+    display: flex;
+  }
+  
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    transition: var(--transition-standard);
+    border: none;
+  }
+  
+  .btn-primary {
+    background-color: var(--color-teal);
+    color: var(--color-navy-dark);
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--color-slate);
+    color: var(--color-white);
+  }
+  
+  .btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary:hover {
+    border-color: var(--color-teal);
+    color: var(--color-teal);
+  }
+  
+  /* Cards */
+  .card {
+    background-color: var(--color-navy-light);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    transition: var(--transition-standard);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Terminal Button */
+  .terminal-toggle-btn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--color-navy-light);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-teal);
+    cursor: pointer;
+    z-index: 40;
+    transition: all 0.3s ease;
+    animation: glow-pulse 2s infinite;
+    box-shadow: 0 0 0 rgba(100, 255, 218, 0);
+  }
+  
+  /* Glow animation */
+  @keyframes glow-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.7);
+      transform: scale(1);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(100, 255, 218, 0);
+      transform: scale(1.05);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(100, 255, 218, 0);
+      transform: scale(1);
+    }
+  }
+  
+  /* Keep the tooltip */
+  .terminal-tooltip {
+    position: absolute;
+    right: 60px;
+    bottom: 0; /* Change from 'top: 50%; transform: translateY(-50%);' to 'bottom: 0;' */
+    background-color: var(--color-navy-light);
+    color: var(--color-white);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+  }
+  
+  .terminal-toggle-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    background-color: var(--color-teal);
+    color: var(--color-navy-dark);
+    animation: none; /* Stop the pulsing animation on hover */
+  }
+  
+  .terminal-toggle-btn:hover + .terminal-tooltip {
+    opacity: 1;
+  }
+  
+  /* Add a little triangle pointer for the tooltip */
+  .terminal-tooltip:after {
+    content: "";
+    position: absolute;
+    bottom: 50%; /* Change from 'top: 50%' to 'bottom: 50%' */
+    right: -6px;
+    transform: translateY(50%); /* Change from 'translateY(-50%)' to 'translateY(50%)' */
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--color-navy-light);
+  }
+  
+  /* Make the animation stop after some time */
+  @media (min-width: 768px) {
+    .terminal-toggle-btn {
+      animation: glow-pulse 2s infinite, stop-animation 0.1s ease 15s forwards;
+    }
+  }
+  
+  @keyframes stop-animation {
+    to {
+      animation: none;
+    }
+  }
+  
+  
+  /* Media queries */
+  @media (max-width: 1024px) {
+    .grid-3, .grid-4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4 {
+      grid-template-columns: 1fr;
+    }
+    
+    section {
+      padding: var(--spacing-xl) 0;
+    }
+    
+    .terminal-toggle-btn {
+      bottom: 20px;
+      right: 20px;
+      width: 42px;
+      height: 42px;
+    }
+  }

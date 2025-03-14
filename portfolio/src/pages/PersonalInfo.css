@@ -1,0 +1,196 @@
+.personal-info-page {
+    padding: 120px 0 80px;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .info-container {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+  }
+  
+  .info-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-navy-light);
+    border-radius: var(--border-radius-md);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition-standard);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(100, 255, 218, 0.3);
+  }
+  
+  .info-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(100, 255, 218, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    color: var(--color-teal);
+  }
+  
+  .info-category {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+  }
+  
+  .info-details {
+    color: var(--color-slate);
+    margin: 0;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .contact-form {
+    background-color: var(--color-navy-light);
+    border-radius: var(--border-radius-md);
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: var(--border-radius-sm);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    transition: var(--transition-standard);
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-teal);
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .personal-info-page {
+      padding: 100px 0 60px;
+    }
+    
+    .page-title {
+      font-size: 2rem;
+    }
+    
+    .contact-form {
+      padding: 1.5rem;
+    }
+  }
+
+  /* Add these styles to your PersonalInfo.css file */
+
+  .success-message {
+    text-align: center;
+    color: var(--color-white);
+    padding: 2rem;
+  }
+  
+  .success-message h2 {
+    color: var(--color-teal);
+    margin-bottom: 1rem;
+  }
+  
+  .success-message p {
+    color: var(--color-slate);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .error-alert {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid rgba(231, 76, 60, 0.2);
+  }
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .linkedin-link {
+    display: flex;
+    align-items: center;
+    color: var(--color-teal);
+    transition: color 0.3s ease;
+    margin-top: 0.5rem;
+  }
+  
+  .linkedin-link:hover {
+    color: #0077b5;
+  }
+  
+  .language-details p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group .error {
+    border-color: #ff6565;
+  }
+  
+  .error-message {
+    color: #ff6565;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+  
+  .contact-form {
+    background-color: var(--color-navy-light);
+    border-radius: var(--border-radius-md);
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .contact-details strong,
+  .language-details strong {
+    color: var(--color-teal);
+  }

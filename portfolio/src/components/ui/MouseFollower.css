@@ -1,0 +1,72 @@
+/* Hide default cursor */
+html {
+    cursor: none;
+  }
+  
+  /* Mouse follower */
+  .mouse-follower {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-teal);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.2s, height 0.2s;
+  }
+  
+  .mouse-follower.clicked {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .mouse-follower-ring {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color-teal);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9998;
+    transition: width 0.3s, height 0.3s, border 0.3s, opacity 0.3s;
+  }
+  
+  .mouse-follower-ring.clicked {
+    width: 25px;
+    height: 25px;
+    border-width: 2px;
+  }
+  
+  .mouse-follower.hidden,
+  .mouse-follower-ring.hidden {
+    opacity: 0;
+  }
+  
+  /* Adjust mouse follower for interactive elements */
+  a, button, input, textarea, select, [role="button"], .btn, .card:hover {
+    cursor: none !important;
+  }
+  
+  a:hover ~ .mouse-follower,
+  button:hover ~ .mouse-follower,
+  input:hover ~ .mouse-follower,
+  textarea:hover ~ .mouse-follower,
+  select:hover ~ .mouse-follower,
+  [role="button"]:hover ~ .mouse-follower,
+  .btn:hover ~ .mouse-follower,
+  .card:hover ~ .mouse-follower {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  
+  a:hover ~ .mouse-follower-ring,
+  button:hover ~ .mouse-follower-ring,
+  input:hover ~ .mouse-follower-ring,
+  textarea:hover ~ .mouse-follower-ring,
+  select:hover ~ .mouse-follower-ring,
+  [role="button"]:hover ~ .mouse-follower-ring,
+  .btn:hover ~ .mouse-follower-ring,
+  .card:hover ~ .mouse-follower-ring {
+    transform: translate(-50%, -50%) scale(1.5);
+  }

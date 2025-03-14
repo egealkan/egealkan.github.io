@@ -1,0 +1,213 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+  }
+  
+  .header-scrolled {
+    background-color: var(--color-navy-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+  
+  .logo {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 700;
+    z-index: 2;
+  }
+  
+  .logo a {
+    color: var(--color-white);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .logo-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, var(--color-teal) 0%, rgba(100, 255, 218, 0) 70%);
+    border-radius: 50%;
+    opacity: 0.5;
+    filter: blur(5px);
+    animation: pulse 3s infinite;
+    z-index: 1;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { 
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.3;
+    }
+    50% { 
+      transform: translate(-50%, -50%) scale(1.2); 
+      opacity: 0.6;
+    }
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-lg);
+  }
+  
+  .nav-item a {
+    padding: var(--spacing-sm);
+    color: var(--color-slate);
+    font-weight: 500;
+    transition: var(--transition-standard);
+  }
+  
+  .nav-item a:hover,
+  .nav-item a.active {
+    color: var(--color-teal);
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+  
+  .download-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .theme-toggle {
+    width: 50px;
+    height: 24px;
+    background-color: var(--color-navy-light);
+    border-radius: 12px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--transition-standard);
+  }
+  
+  .toggle-circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-teal);
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: var(--transition-standard);
+    z-index: 2;
+  }
+  
+  .toggle-circle.toggled {
+    left: calc(100% - 22px);
+    background-color: #ffd23f;
+  }
+  
+  .toggle-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    transition: var(--transition-standard);
+  }
+  
+  .toggle-icon.moon {
+    right: 5px;
+    opacity: 1;
+  }
+  
+  .toggle-icon.sun {
+    left: 5px;
+    opacity: 0;
+  }
+  
+  .toggle-circle.toggled ~ .toggle-icon.moon {
+    opacity: 0;
+  }
+  
+  .toggle-circle.toggled ~ .toggle-icon.sun {
+    opacity: 1;
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+  }
+  
+  .mobile-menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 992px) {
+    .nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: var(--color-navy-dark);
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease;
+    }
+  
+    .nav-open {
+      height: calc(100vh - 70px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      padding: var(--spacing-lg);
+      gap: var(--spacing-lg);
+    }
+  
+    .nav-item {
+      width: 100%;
+    }
+  
+    .nav-item a {
+      display: block;
+      font-size: 1.2rem;
+    }
+  
+    .mobile-menu-toggle {
+      display: flex;
+    }
+  
+    .download-btn {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header-actions .theme-toggle {
+      display: none;
+    }
+  }

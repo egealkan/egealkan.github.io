@@ -1,0 +1,107 @@
+.project-card {
+    background-color: var(--color-navy-light);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    transition: var(--transition-standard);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .project-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .project-year {
+    color: var(--color-slate);
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 16px;
+  }
+  
+  .project-description {
+    color: var(--color-slate);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .project-tag {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--color-teal);
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 16px;
+  }
+  
+  .project-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .project-step {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition-standard);
+  }
+  
+  .project-step:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  .project-step.active {
+    background-color: rgba(100, 255, 218, 0.1);
+  }
+  
+  .step-header {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+  
+  .step-number {
+    background-color: var(--color-teal);
+    color: var(--color-navy-dark);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .step-title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .step-content {
+    padding: 0 var(--spacing-md) var(--spacing-md) calc(30px + var(--spacing-md) * 2);
+    color: var(--color-slate);
+  }
