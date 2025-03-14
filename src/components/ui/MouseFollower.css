@@ -70,3 +70,19 @@ html {
   .card:hover ~ .mouse-follower-ring {
     transform: translate(-50%, -50%) scale(1.5);
   }
+
+  /* Disable mouse follower on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .mouse-follower,
+  .mouse-follower-ring {
+    display: none !important;
+  }
+  
+  html {
+    cursor: auto !important;
+  }
+  
+  a, button, input, textarea, select, [role="button"], .btn, .card:hover {
+    cursor: auto !important;
+  }
+}
