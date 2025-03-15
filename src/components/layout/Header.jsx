@@ -30,23 +30,11 @@ const Header = () => {
     e.preventDefault();
     
     if (window.confirm("Are you sure you want to download Egemen's CV?")) {
-      // Create a link element
       const link = document.createElement('a');
-      
-      // Set the href to the path of your CV file
-      // Note: Place your CV file in the public folder of your React project
       link.href = '/Egemen_Alkan_CV.pdf';
-      
-      // Set download attribute
       link.download = 'Egemen_Alkan_CV.pdf';
-      
-      // Append to the document
       document.body.appendChild(link);
-      
-      // Trigger the download
       link.click();
-      
-      // Clean up
       document.body.removeChild(link);
     }
   };
@@ -62,32 +50,56 @@ const Header = () => {
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-list">
             <li className="nav-item">
-              <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => isActive ? 'active' : ''}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/experience" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink 
+                to="/experience" 
+                className={({ isActive }) => isActive ? 'active' : ''}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Experience
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/skills" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink 
+                to="/skills" 
+                className={({ isActive }) => isActive ? 'active' : ''}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Skills
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/languages" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink 
+                to="/languages" 
+                className={({ isActive }) => isActive ? 'active' : ''}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Languages
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/education" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink 
+                to="/education" 
+                className={({ isActive }) => isActive ? 'active' : ''}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Education
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/personal-info" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink 
+                to="/personal-info" 
+                className={({ isActive }) => isActive ? 'active' : ''}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Personal Info
               </NavLink>
             </li>
