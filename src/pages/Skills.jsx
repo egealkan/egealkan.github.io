@@ -8,7 +8,7 @@ const Skills = () => {
     dataAi: [
         { name: 'Data Science', percentage: 85 },
         { name: 'Data Engineering', percentage: 80 },
-        { name: 'Deep Learning', percentage: 75 },
+        { name: 'Deep Learning', percentage: 85 },
         { name: 'Data Analytics', percentage: 90 },
         { name: 'Data Visualization', percentage: 85 },
         { name: 'Cloud AI', percentage: 70 },
@@ -20,13 +20,14 @@ const Skills = () => {
         { name: 'Neural Networks', percentage: 70 },
         { name: 'TensorFlow', percentage: 70 },
         { name: 'Keras', percentage: 65 },
-        { name: 'PyTorch', percentage: 65 },
+        { name: 'PyTorch', percentage: 80 },
         { name: 'AWS', percentage: 70 }
         ],
       development: [
         { name: 'Python', percentage: 95 },
         { name: 'Java', percentage: 90 },
         { name: 'JavaScript & React', percentage: 85 },
+        { name: 'React', percentage: 80 },
         { name: 'PHP', percentage: 80 },
         { name: '.NET Framework', percentage: 75 },
         { name: 'HTML/CSS', percentage: 90 },
@@ -94,7 +95,7 @@ const Skills = () => {
           <h1 className="page-title">Skills & Expertise</h1>
           
           <div className="skills-nav">
-            <a href="/languages" className="skills-nav-link">
+            <a href="./languages" className="skills-nav-link">
               Go to Language Skills
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

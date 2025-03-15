@@ -10,7 +10,7 @@ const Education = () => {
       location: 'Geel, Belgium',
       skills: {
         'AI and data': ['Artificial Intelligence (AI)', 'Deep Learning', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Data Science', 'Big Data', 'Neural Networks', 'TensorFlow', 'Keras', 'PyTorch', 'Data Visualization', 'Data Engineering', 'AWS', 'Internet of Things (IoT)', 'Ubuntu'],
-        development: ['ASP.NET', 'Web Development', 'Front-End Development', 'SQL', 'PHP', 'C#', 'Python', 'Livewire', 'Tailwind CSS', 'Laravel', 'Object-Oriented Programming', 'JavaScript', 'SASS', 'HTML5', 'Back-End Development', 'CSS', 'HTML', 'Java', 'Spring Framework'],
+        development: ['ASP.NET', 'React', 'Web Development', 'Front-End Development', 'SQL', 'PHP', 'C#', 'Python', 'Livewire', 'Tailwind CSS', 'Laravel', 'Object-Oriented Programming', 'JavaScript', 'SASS', 'HTML5', 'Back-End Development', 'CSS', 'HTML', 'Java', 'Spring Framework'],
         business: ['Business Process', 'Business Intelligence (BI)', 'Qlik Sense', 'UML', 'ORM', 'Entrepreneurship', 'Microsoft 365', 'Microsoft Power BI', 'Microsoft Power Automate', 'PnP']
       }
     },
