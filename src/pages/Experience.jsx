@@ -82,21 +82,25 @@ const Experience = () => {
         
         <div className="projects-container">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+            <div key={index} className="project-wrapper">
+              <ProjectCard project={project} />
+              
+              {/* Video showcase for each project */}
+              <div className="video-showcase">
+                <div className="video-container">
+                  <div className="video-placeholder">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M10 8L16 12L10 16V8Z" fill="currentColor"/>
+                    </svg>
+                    <span>Watch {project.title} demo</span>
+                  </div>
+                </div>
+              </div>
+              <br />
+            </div>
           ))}
         </div>
-        
-        {/* <div className="video-showcase">
-          <div className="video-container">
-            <div className="video-placeholder">
-              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="#64FFDA" strokeWidth="2"/>
-                <path d="M10 8L16 12L10 16V8Z" fill="#64FFDA"/>
-              </svg>
-              <span>Watch project demo</span>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

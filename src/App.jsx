@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Terminal from './components/ui/Terminal';
 import AnimatedBackground from './components/ui/AnimatedBackground';
-import MouseFollower from './components/ui/MouseFollower';
 import Home from './pages/Home';
 import Experience from './pages/Experience';
 import Skills from './pages/Skills';
@@ -14,40 +13,12 @@ import PersonalInfo from './pages/PersonalInfo';
 
 function App() {
   const [terminalOpen, setTerminalOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
-  const [konami, setKonami] = useState(false);
-  
-  // Track keypresses for Easter egg
-  useEffect(() => {
-    const handleKeyPress = (e) => {
-      // Z key to trigger Easter egg
-      if (e.key.toLowerCase() === 'z') {
-        setKonami(true);
-        setTimeout(() => setKonami(false), 5000);
-      }
-    };
-    
-    window.addEventListener('keydown', handleKeyPress);
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, []);
-  
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    if (darkMode) {
-      document.body.classList.add('light-mode');
-    } else {
-      document.body.classList.remove('light-mode');
-    }
-  };
   
   return (
     <Router>
-      <div className={`app ${darkMode ? 'dark-mode' : 'light-mode'} ${konami ? 'konami-mode' : ''}`}>
+      <div className="app">
         <AnimatedBackground />
-        <MouseFollower />
-        <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <Header />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -59,20 +30,6 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        
-        {/* Easter egg hint */}
-        <div className="easter-egg-hint">Press 'Z' to discover a secret...</div>
-        
-        {/* Easter egg content */}
-        {konami && (
-          <div className="konami-easter-egg">
-            <div className="konami-content">
-              <h3>You found the secret! 🎉</h3>
-              <p>As a reward, here's a secret fact: This portfolio was created with React and Vite!</p>
-              <div className="konami-animation">⭐</div>
-            </div>
-          </div>
-        )}
         
         {/* Terminal toggle button with tooltip */}
         <div className="terminal-toggle-container">

@@ -17,7 +17,7 @@ const AnimatedBackground = () => {
     setCanvasDimensions();
     window.addEventListener('resize', setCanvasDimensions);
     
-    // Particle configuration
+    // Particle configuration with new colors
     const particleCount = 50;
     const particles = [];
     
@@ -30,7 +30,7 @@ const AnimatedBackground = () => {
         speed: Math.random() * 0.5 + 0.2,
         directionX: Math.random() * 2 - 1,
         directionY: Math.random() * 2 - 1,
-        color: `rgba(100, 255, 218, ${Math.random() * 0.5 + 0.1})`
+        color: `rgba(0, 128, 128, ${Math.random() * 0.3 + 0.1})`
       });
     }
     
@@ -66,7 +66,7 @@ const AnimatedBackground = () => {
           
           if (distance < 150) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(100, 255, 218, ${0.2 - (distance / 750)})`;
+            ctx.strokeStyle = `rgba(0, 128, 128, ${0.15 - (distance / 1000)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);

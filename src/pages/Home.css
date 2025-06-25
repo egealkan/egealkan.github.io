@@ -1,367 +1,358 @@
 .home-page {
-    overflow-x: hidden;
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 120px 0 80px;
-    position: relative;
-  }
-  
+  overflow-x: hidden;
+  background-color: var(--color-background);
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 0 80px;
+  position: relative;
+  background-color: var(--color-background);
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-text {
+  max-width: 600px;
+  flex: 1;
+}
+
+.level-badge {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  animation: fadeIn 0.5s ease;
+}
+
+.level-text {
+  background-color: var(--color-primary-accent);
+  color: var(--color-white);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.progress-bar {
+  width: 100px;
+  height: 4px;
+  background-color: var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--color-secondary-accent);
+  transition: width 0.3s ease;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  position: relative;
+  animation: slideUp 0.5s ease 0.2s both;
+  color: var(--color-heading-text);
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: var(--color-primary-accent);
+  vertical-align: text-top;
+  margin-left: 2px;
+}
+
+.blinking {
+  animation: pulse 1s infinite;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-primary-accent);
+  margin-bottom: 24px;
+  animation: slideUp 0.5s ease 0.4s both;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--color-primary-text);
+  margin-bottom: 32px;
+  line-height: 1.6;
+  animation: slideUp 0.5s ease 0.6s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  animation: slideUp 0.5s ease 0.8s both;
+}
+
+.hero-visual {
+  position: relative;
+  animation: fadeIn 1s ease 1s both;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character-card {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-primary-accent);
+  border-radius: 8px;
+  background-color: var(--color-card-background);
+}
+
+.rotate-1 {
+  transform: rotate(12deg);
+}
+
+.rotate-2 {
+  transform: rotate(-6deg);
+}
+
+.card-content {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-card-background);
+  border: 2px solid var(--color-primary-accent);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: var(--color-hover);
+  border: 3px solid var(--color-primary-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-primary-accent);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease 1.5s both;
+}
+
+.scroll-text {
+  color: var(--color-primary-text);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.mouse-icon {
+  width: 24px;
+  height: 40px;
+  border: 2px solid var(--color-primary-text);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.mouse-wheel {
+  width: 4px;
+  height: 8px;
+  background-color: var(--color-primary-accent);
+  border-radius: 2px;
+  margin-top: 8px;
+  animation: bounce 2s infinite;
+}
+
+/* Achievements Section */
+.achievements-section {
+  padding: 80px 0;
+  background-color: var(--color-background);
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--color-heading-text);
+}
+
+.section-subtitle {
+  color: var(--color-primary-text);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.achievement-item {
+  background-color: var(--color-card-background);
+  border-radius: 8px;
+  padding: 32px;
+  border: 1px solid var(--color-border);
+  transition: var(--transition-standard);
+}
+
+.achievement-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(28, 45, 99, 0.1);
+  border-color: var(--color-primary-accent);
+}
+
+.achievement-item .achievement-title {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: var(--color-heading-text);
+}
+
+.achievement-item .achievement-period {
+  color: var(--color-primary-accent);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.achievement-item .achievement-description {
+  color: var(--color-primary-text);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.achievement-item .achievement-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.achievement-item .achievement-tag {
+  background-color: var(--color-primary-accent);
+  color: var(--color-white);
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+}
+
+.linkedin-link {
+  color: var(--color-primary-accent);
+  text-decoration: underline;
+  transition: var(--transition-standard);
+}
+
+.linkedin-link:hover {
+  color: var(--color-secondary-accent);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
   .hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   
   .hero-text {
-    max-width: 600px;
+    margin-bottom: 40px;
   }
   
   .level-badge {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    animation: fadeIn 0.5s ease;
-  }
-  
-  .level-text {
-    background-color: rgba(100, 255, 218, 0.2);
-    color: var(--color-teal);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 14px;
-    margin-right: 8px;
-  }
-  
-  .progress-bar {
-    width: 100px;
-    height: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  
-  .progress-fill {
-    height: 100%;
-    background-color: var(--color-teal);
-    transition: width 0.3s ease;
-  }
-  
-  .hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 24px;
-    position: relative;
-    animation: slideUp 0.5s ease 0.2s both;
-  }
-  
-  .cursor {
-    display: inline-block;
-    width: 3px;
-    height: 1em;
-    background-color: var(--color-teal);
-    vertical-align: text-top;
-    margin-left: 2px;
-  }
-  
-  .blinking {
-    animation: pulse 1s infinite;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--color-slate);
-    margin-bottom: 24px;
-    animation: slideUp 0.5s ease 0.4s both;
-  }
-  
-  .hero-description {
-    font-size: 1.1rem;
-    color: var(--color-slate);
-    margin-bottom: 32px;
-    line-height: 1.6;
-    animation: slideUp 0.5s ease 0.6s both;
+    justify-content: center;
   }
   
   .hero-buttons {
-    display: flex;
-    gap: 16px;
-    margin-top: 8px;
-    animation: slideUp 0.5s ease 0.8s both;
+    justify-content: center;
   }
   
-  .hero-visual {
-    position: relative;
-    animation: fadeIn 1s ease 1s both;
+  .hero-title {
+    font-size: 3rem;
   }
   
-  .character-card {
-    position: relative;
-    width: 250px;
-    height: 250px;
+  .hero-subtitle {
+    font-size: 1.5rem;
   }
-  
-  .card-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 2px solid rgba(100, 255, 218, 0.3);
-    border-radius: 8px;
-    background-color: rgba(23, 42, 70, 0.5);
-  }
-  
-  .rotate-1 {
-    transform: rotate(12deg);
-  }
-  
-  .rotate-2 {
-    transform: rotate(-6deg);
-  }
-  
-  .card-content {
-    position: absolute;
-    inset: 0;
-    background-color: var(--color-navy-light);
-    border: 2px solid rgba(100, 255, 218, 0.5);
-    border-radius: 8px;
-    display: flex;
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-  }
-  
-  .avatar-image {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .avatar {
-    width: 180px; /* Increased from 96px */
-    height: 180px; /* Increased from 96px */
-    margin: 0 auto;
-    border-radius: 50%;
-    background-color: rgba(100, 255, 218, 0.2);
-    border: 1px solid rgba(100, 255, 218, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  /* You might need to adjust the card content padding to fit the larger avatar */
-  .card-content {
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .card-placeholder-lines {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-  }
-  
-  .placeholder-line {
-    height: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-  }
-  
-  .placeholder-line:nth-child(1) {
-    width: 80%;
+    max-width: 300px;
     margin: 0 auto;
   }
   
-  .placeholder-line:nth-child(2) {
-    width: 100%;
-  }
-  
-  .placeholder-line:nth-child(3) {
-    width: 60%;
-    margin: 0 auto;
-  }
-  
-  .scroll-indicator {
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: fadeIn 1s ease 1.5s both;
-  }
-  
-  .scroll-text {
-    color: var(--color-slate);
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-  
-  .mouse-icon {
-    width: 24px;
-    height: 40px;
-    border: 2px solid var(--color-slate);
-    border-radius: 20px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .mouse-wheel {
-    width: 4px;
-    height: 8px;
-    background-color: var(--color-teal);
-    border-radius: 2px;
-    margin-top: 8px;
-    animation: bounce 2s infinite;
-  }
-  
-  /* Achievements Section */
-  .achievements-section {
-    padding: 80px 0;
+  .hero-title {
+    font-size: 2.5rem;
   }
   
   .section-title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 16px;
+    font-size: 1.8rem;
   }
-  
-  .section-subtitle {
-    color: var(--color-slate);
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  .achievements-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .achievement-item {
-    background-color: rgba(23, 42, 70, 0.5);
-    border-radius: 8px;
-    padding: 32px;
-    border: 1px solid rgba(100, 255, 218, 0.2);
-    transition: var(--transition-standard);
-  }
-  
-  .achievement-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border-color: rgba(100, 255, 218, 0.4);
-  }
-  
-  .achievement-item .achievement-title {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
-  }
-  
-  .achievement-item .achievement-period {
-    color: var(--color-teal);
-    font-size: 0.9rem;
-    margin-bottom: 16px;
-  }
-  
-  .achievement-item .achievement-description {
-    color: var(--color-slate);
-    margin-bottom: 24px;
-    line-height: 1.6;
-  }
-  
-  .achievement-item .achievement-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  
-  .achievement-item .achievement-tag {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--color-white);
-    padding: 6px 12px;
-    border-radius: 16px;
-    font-size: 0.85rem;
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  @keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-  
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-  
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
-  }
-  
-  /* Media Queries */
-  @media (max-width: 992px) {
-    .hero-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    
-    .hero-text {
-      margin-bottom: 40px;
-    }
-    
-    .level-badge {
-      justify-content: center;
-    }
-    
-    .hero-buttons {
-      justify-content: center;
-    }
-    
-    .hero-title {
-      font-size: 3rem;
-    }
-    
-    .hero-subtitle {
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .hero-buttons {
-      flex-direction: column;
-      width: 100%;
-      max-width: 300px;
-      margin: 0 auto;
-    }
-    
-    .hero-title {
-      font-size: 2.5rem;
-    }
-    
-    .section-title {
-      font-size: 1.8rem;
-    }
-  }
+}
