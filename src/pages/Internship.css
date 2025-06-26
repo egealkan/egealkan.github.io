@@ -1,0 +1,322 @@
+.internship-page {
+  padding: 120px 0 80px;
+  background-color: var(--color-background);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-heading-text);
+}
+
+.internship-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.internship-header {
+  background-color: var(--color-card-background);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--color-border);
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.internship-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-hover);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-accent);
+  flex-shrink: 0;
+}
+
+.internship-info {
+  flex-grow: 1;
+}
+
+.internship-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--color-heading-text);
+}
+
+.company-name {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary-accent);
+}
+
+.period-location {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary-text);
+  font-size: 0.9rem;
+}
+
+.period::after {
+  content: "•";
+  margin-left: 1rem;
+  color: var(--color-primary-accent);
+}
+
+.supervisor {
+  color: var(--color-primary-text);
+  font-size: 0.9rem;
+}
+
+.internship-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary-accent);
+  border-bottom: 2px solid var(--color-hover);
+  padding-bottom: 0.5rem;
+}
+
+.summary-section {
+  background-color: var(--color-card-background);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.summary-text {
+  color: var(--color-primary-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.responsibilities-section,
+.technologies-section {
+  background-color: var(--color-card-background);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.responsibility-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibility-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-primary-text);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.responsibility-item:last-child {
+  border-bottom: none;
+}
+
+.responsibility-item::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-accent);
+  font-size: 0.8rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background-color: var(--color-primary-accent);
+  color: var(--color-white);
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.internship-achievements-section {
+  background-color: var(--color-card-background);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.internship-achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.internship-achievement-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-sm);
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: var(--transition-standard);
+}
+
+.internship-achievement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(28, 45, 99, 0.1);
+  border-color: var(--color-primary-accent);
+}
+
+.internship-achievement-number {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-primary-accent);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.internship-achievement-text {
+  color: var(--color-primary-text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.documents-section {
+  background-color: var(--color-card-background);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.documents-note {
+  color: var(--color-primary-text);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: var(--color-hover);
+  border-radius: var(--border-radius-sm);
+  border-left: 4px solid var(--color-primary-accent);
+}
+
+.documents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.document-item {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-sm);
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition-standard);
+}
+
+.document-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(28, 45, 99, 0.1);
+  border-color: var(--color-primary-accent);
+}
+
+.document-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-hover);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-accent);
+  flex-shrink: 0;
+}
+
+.document-info {
+  flex-grow: 1;
+}
+
+.document-name {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-heading-text);
+}
+
+.document-description {
+  font-size: 0.85rem;
+  color: var(--color-primary-text);
+  margin: 0;
+}
+
+.document-status {
+  flex-shrink: 0;
+}
+
+.status-available {
+  color: var(--color-primary-accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status-pending {
+  color: var(--color-secondary-accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .internship-page {
+    padding: 100px 0 60px;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .internship-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .internship-content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .internship-achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .period-location {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .period::after {
+    display: none;
+  }
+}

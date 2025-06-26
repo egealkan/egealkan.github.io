@@ -8,38 +8,67 @@ const Education = () => {
       degree: 'Bachelor • Applied Computer Science',
       period: '2022 - Present',
       location: 'Geel, Belgium',
-      skills: {
-        'AI and data': ['Artificial Intelligence (AI)', 'Deep Learning', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Data Science', 'Big Data', 'Neural Networks', 'TensorFlow', 'Keras', 'PyTorch', 'Data Visualization', 'Data Engineering', 'AWS', 'Internet of Things (IoT)', 'Ubuntu'],
-        development: ['ASP.NET', 'React', 'Web Development', 'Front-End Development', 'SQL', 'PHP', 'C#', 'Python', 'Livewire', 'Tailwind CSS', 'Laravel', 'Object-Oriented Programming', 'JavaScript', 'SASS', 'HTML5', 'Back-End Development', 'CSS', 'HTML', 'Java', 'Spring Framework'],
-        business: ['Business Process', 'Business Intelligence (BI)', 'Qlik Sense', 'UML', 'ORM', 'Entrepreneurship', 'Microsoft 365', 'Microsoft Power BI', 'Microsoft Power Automate', 'PnP']
-      }
-    },
-    {
-      university: 'University of Victoria',
-      degree: 'Computer Science',
-      period: '2019 - 2022 (Not Completed)',
-      location: 'Victoria, Canada',
-      skills: {
-        fundamentals: ['C', 'Statistics', 'Computer Architecture', 'Academic Writing', 'Algorithms', 'Data Structures'],
-        math: ['Discrete Mathematics', 'Calculus', 'Linear Algebra'],
-        other: ['Customer Service', 'Computer Science']
-      }
-    },
-    {
-        university: 'Victoria High School',
-        degree: 'High School Diploma',
-        period: '2016 - 2019',
-        location: 'Victoria, Canada',
-        skills: {
-            // 'High School': ['Physics', 'Chemistry', 'Biology', 'Mathematics', 'English', 'Social Studies', 'French', 'Computer Science', 'Physical Education', 'Art', 'Music', 'Drama', 'Work Experience', 'Career Life Education']
+      academicYears: [
+        {
+          year: '2024-2025 (Current)',
+          courses: [
+            '.NET Development',
+            'Data Visualisation',
+            'Professional Skills 3',
+            'Project 4.0',
+            'Project PHP',
+            'Religion, Meaning and Culture',
+            'Business Intelligence Project',
+            'Cloud AI',
+            'Data Engineering',
+            'Deep Learning',
+            'Enterprise Content Services'
+          ]
+        },
+        {
+          year: '2023-2024',
+          courses: [
+            'Java Advanced (EN)',
+            'Linux Webservices (EN)',
+            'Web Applications in PHP (EN)',
+            'Artificial Intelligence (EN)',
+            'Business Processes & ITIL (EN)',
+            'Entrepreneurship (EN)',
+            'Professional Skills 2 (EN)',
+            'Security Essentials (EN)',
+            'UML (EN)',
+            'Data Science (EN)',
+            'DevOps & Security (EN)',
+            'Intercultural Communication (EN)',
+            'Operating Systems (EN)',
+            'Requirements Analysis (EN)'
+          ]
+        },
+        {
+          year: '2022-2023',
+          courses: [
+            'Application Development in Python (EN)',
+            'IT Essentials (EN)',
+            'IoT Essentials (EN)',
+            'Network Essentials (EN)',
+            'Webdesign Essentials (EN)',
+            'Application Development in Java (EN)',
+            'Communication Skills 1 (EN)',
+            'Data Analysis with SQL (EN)',
+            'Professional Skills 1 (EN)',
+            'Switching, Routing and Wireless Essentials (EN)',
+            'Webdesign Advanced (EN)',
+            'Windows System Administration (EN)'
+          ]
         }
-      }
+      ]
+    },
   ];
 
   return (
     <div className="education-page">
       <div className="container">
-        <h1 className="page-title">Education</h1>
+        <h1 className="page-title">Education & ECTS Courses</h1>
         
         <div className="education-timeline">
           {educationData.map((education, index) => (
@@ -64,13 +93,15 @@ const Education = () => {
                 </div>
               </div>
               
-              <div className="skills-section">
-                {Object.entries(education.skills).map(([category, skillList]) => (
-                  <div key={category} className="skill-category">
-                    <h3 className="category-title">{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
-                    <div className="skill-tags">
-                      {skillList.map((skill, skillIndex) => (
-                        <span key={skillIndex} className="skill-tag">{skill}</span>
+              <div className="courses-section">
+                {education.academicYears.map((yearData, yearIndex) => (
+                  <div key={yearIndex} className="academic-year">
+                    <h3 className="year-title">{yearData.year}</h3>
+                    <div className="courses-grid">
+                      {yearData.courses.map((course, courseIndex) => (
+                        <div key={courseIndex} className="course-item">
+                          <span className="course-name">{course}</span>
+                        </div>
                       ))}
                     </div>
                   </div>

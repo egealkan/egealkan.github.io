@@ -7,14 +7,14 @@
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--color-heading-text);
+  color: var(--color-midnight-blue); /* Dark blue title */
 }
 
 .education-timeline {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -39,18 +39,18 @@
   gap: 1.5rem;
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 2px solid var(--color-midnight-blue); /* Dark blue border */
 }
 
 .university-icon {
   width: 50px;
   height: 50px;
-  background-color: var(--color-hover);
+  background-color: var(--color-midnight-blue); /* Dark blue background */
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-primary-accent);
+  color: var(--color-mustard-yellow); /* Yellow icon */
   flex-shrink: 0;
 }
 
@@ -61,67 +61,82 @@
 .university-name {
   font-size: 1.8rem;
   margin-bottom: 0.75rem;
-  color: var(--color-heading-text);
+  color: var(--color-midnight-blue); /* Dark blue title */
 }
 
 .degree-info {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: var(--color-primary-text);
+  color: var(--color-heading-text); /* Yellow text */
+  font-weight: 600;
 }
 
 .period-location {
   display: flex;
   gap: 1rem;
-  color: var(--color-primary-text);
+  color: var(--color-heading-text); /* Yellow text */
   font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .period::after {
   content: "•";
   margin-left: 1rem;
-  color: var(--color-primary-accent);
+  color: var(--color-midnight-blue); /* Dark blue separator */
 }
 
-.skills-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.skill-category {
-  margin-bottom: 1.5rem;
-}
-
-.category-title {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: var(--color-primary-accent);
-  text-transform: capitalize;
-  font-weight: 600;
-}
-
-.skill-tags {
+.courses-section {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.skill-tag {
+.academic-year {
   background-color: var(--color-white);
-  color: var(--color-heading-text);
-  font-size: 0.9rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 2px solid var(--color-midnight-blue); /* Dark blue border */
 }
 
-.skill-tag:hover {
-  background-color: var(--color-primary-accent);
-  color: var(--color-white);
-  transform: translateY(-2px);
-  border-color: var(--color-primary-accent);
+.year-title {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-midnight-blue); /* Dark blue title */
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--color-mustard-yellow); /* Yellow background */
+  border-radius: var(--border-radius-sm);
+  font-weight: 700;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.course-item {
+  background-color: var(--color-midnight-blue); /* Dark blue background */
+  color: var(--color-mustard-yellow); /* Yellow text */
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-sm);
+  transition: all 0.3s ease;
+  border: 2px solid var(--color-midnight-blue);
+  text-align: center;
+  font-weight: 500;
+}
+
+.course-item:hover {
+  background-color: var(--color-mustard-yellow); /* Yellow background on hover */
+  color: var(--color-midnight-blue); /* Dark blue text on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(227, 206, 15, 0.3);
+  border-color: var(--color-mustard-yellow);
+}
+
+.course-name {
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
@@ -130,7 +145,7 @@
     gap: 1rem;
   }
   
-  .skills-section {
+  .courses-grid {
     grid-template-columns: 1fr;
   }
   
@@ -141,5 +156,9 @@
   
   .period::after {
     display: none;
+  }
+  
+  .year-title {
+    font-size: 1.1rem;
   }
 }

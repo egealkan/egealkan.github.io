@@ -10,6 +10,8 @@ import Skills from './pages/Skills';
 import Languages from './pages/Languages';
 import Education from './pages/Education';
 import PersonalInfo from './pages/PersonalInfo';
+import Internship from './pages/Internship';
+import About from './pages/About';
 
 function App() {
   const [terminalOpen, setTerminalOpen] = useState(false);
@@ -27,6 +29,8 @@ function App() {
             <Route path="/languages" element={<Languages />} />
             <Route path="/education" element={<Education />} />
             <Route path="/personal-info" element={<PersonalInfo />} />
+            <Route path="/internship" element={<Internship />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
         <Footer />
