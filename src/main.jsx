@@ -11,18 +11,35 @@
 
 
 
+// import { StrictMode } from 'react'
+// import { createRoot } from 'react-dom/client'
+// import { BrowserRouter } from 'react-router-dom' // Import Router here
+// // import './index.css'
+// import './styles/globals.css'
+// import App from './App.jsx'
+
+// createRoot(document.getElementById('root')).render(
+//   <StrictMode>
+//     {/* Wrap the entire App in BrowserRouter here */}
+//     <BrowserRouter>
+//       <App />
+//     </BrowserRouter>
+//   </StrictMode>,
+// )
+
+
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom' // Import Router here
-// import './index.css'
-import './styles/globals.css'
+import { HashRouter } from 'react-router-dom' // <-- NEW: Import HashRouter
 import App from './App.jsx'
+import './styles/globals.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* Wrap the entire App in BrowserRouter here */}
-    <BrowserRouter>
+    {/* NEW: Use HashRouter instead of BrowserRouter */}
+    <HashRouter> 
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )
