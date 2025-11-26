@@ -10,7 +10,7 @@ const Education = () => {
       location: 'Geel, Belgium',
       academicYears: [
         {
-          year: '2024-2025 (Current)',
+          year: '2024-2025',
           courses: [
             '.NET Development',
             'Data Visualisation',
