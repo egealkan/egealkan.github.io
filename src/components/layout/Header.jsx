@@ -82,7 +82,7 @@ const Header = () => {
                 className={({ isActive }) => isActive ? 'active' : ''}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Experience
+                Projects
               </NavLink>
             </li>
             <li className="nav-item">

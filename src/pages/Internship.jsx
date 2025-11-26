@@ -17,7 +17,7 @@ const Internship = () => {
     company: "Estée Lauder Companies",
     period: "September 2025 - December 2025", // Adjusted based on typical fall semester, edit if needed
     location: "Oevel, Belgium",
-    supervisor: "Wietse Beterams",
+    mentor: "Wietse Beterams",
     summary: `
       Designed and delivered a dual-workstream project to address critical operational bottlenecks in weekly planning meetings. The initiative transformed a historically reactive, manual data validation process into an automated, strategic decision-making workflow.
       
@@ -92,7 +92,7 @@ const Internship = () => {
                   <span className="location">{internshipData.location}</span>
                 </div>
                 <div className="supervisor">
-                  <strong>Supervisor:</strong> {internshipData.supervisor}
+                  <strong>Mentor:</strong> {internshipData.mentor}
                 </div>
               </div>
             </div>
