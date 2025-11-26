@@ -1,41 +1,49 @@
 .internship-page {
   padding: 120px 0 80px;
   background-color: var(--color-background);
+  color: var(--color-primary-text);
 }
 
 .page-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   color: var(--color-heading-text);
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .internship-container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
+/* --- Header Section --- */
 .internship-header {
-  background-color: var(--color-card-background);
+  background-color: var(--color-card-background); /* Light Cream */
   border-radius: var(--border-radius-lg);
-  padding: 2rem;
-  margin-bottom: 2rem;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
   border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: flex-start;
 }
 
 .internship-icon {
-  width: 60px;
-  height: 60px;
-  background-color: var(--color-hover);
-  border-radius: 12px;
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-white);
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-primary-accent);
+  color: var(--color-primary-accent); /* Dark Blue */
+  font-size: 2rem;
   flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .internship-info {
@@ -43,74 +51,87 @@
 }
 
 .internship-title {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: var(--color-heading-text);
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-heading-text); /* Midnight Blue */
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .company-name {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
   color: var(--color-primary-accent);
+  font-weight: 600;
 }
 
 .period-location {
   display: flex;
   gap: 1rem;
-  margin-bottom: 0.5rem;
-  color: var(--color-primary-text);
-  font-size: 0.9rem;
+  color: var(--color-dim-gray);
+  font-size: 0.95rem;
+  font-family: var(--font-mono);
 }
 
 .period::after {
   content: "•";
   margin-left: 1rem;
-  color: var(--color-primary-accent);
+  color: var(--color-secondary-accent); /* Mustard Yellow */
 }
 
 .supervisor {
-  color: var(--color-primary-text);
-  font-size: 0.9rem;
+  color: var(--color-dim-gray);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
 }
 
+/* --- Content Layout --- */
 .internship-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .section-title {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: var(--color-primary-accent);
-  border-bottom: 2px solid var(--color-hover);
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-heading-text);
+  border-bottom: 3px solid var(--color-secondary-accent); /* Mustard Underline */
   padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
+/* --- Summary --- */
 .summary-section {
-  background-color: var(--color-card-background);
+  background-color: var(--color-white);
   border-radius: var(--border-radius-md);
-  padding: 1.5rem;
-  border: 1px solid var(--color-border);
+  padding: 0; /* Remove padding to blend with page, or add border if preferred */
 }
 
 .summary-text {
   color: var(--color-primary-text);
-  line-height: 1.6;
+  line-height: 1.8;
   margin: 0;
+  font-size: 1.05rem;
 }
 
+/* --- Grid for Responsibilities & Tech --- */
 .content-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
 }
 
-.responsibilities-section,
-.technologies-section {
-  background-color: var(--color-card-background);
+/* Responsibilities */
+.responsibilities-section {
+  background-color: var(--color-card-background); /* Light Cream */
   border-radius: var(--border-radius-md);
-  padding: 1.5rem;
+  padding: 2rem;
   border: 1px solid var(--color-border);
 }
 
@@ -122,10 +143,11 @@
 
 .responsibility-item {
   padding: 0.75rem 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(54, 69, 79, 0.1);
   color: var(--color-primary-text);
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 1.75rem;
+  line-height: 1.6;
 }
 
 .responsibility-item:last-child {
@@ -133,17 +155,27 @@
 }
 
 .responsibility-item::before {
-  content: "▶";
+  content: "➤";
   position: absolute;
   left: 0;
-  color: var(--color-primary-accent);
+  color: var(--color-secondary-accent); /* Mustard Bullet */
   font-size: 0.8rem;
+  top: 1.1rem; /* Align with text */
+}
+
+/* Technologies */
+.technologies-section {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .tech-tag {
@@ -153,6 +185,7 @@
   border-radius: 16px;
   font-size: 0.85rem;
   font-weight: 500;
+  box-shadow: 0 2px 5px rgba(28, 45, 99, 0.2);
   transition: all 0.2s ease;
   border: 1px solid var(--color-secondary-accent);
 }
@@ -164,23 +197,17 @@
   border-color: var(--color-primary-accent);
 }
 
-.internship-achievements-section {
-  background-color: var(--color-card-background);
-  border-radius: var(--border-radius-md);
-  padding: 1.5rem;
-  border: 1px solid var(--color-border);
-}
-
+/* --- Achievements --- */
 .internship-achievements-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .internship-achievement-card {
-  background-color: var(--color-white);
-  border-radius: var(--border-radius-sm);
-  padding: 1rem;
+  background-color: var(--color-card-background); /* Light Cream */
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
   border: 1px solid var(--color-border);
   display: flex;
   align-items: flex-start;
@@ -189,69 +216,58 @@
 }
 
 .internship-achievement-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(28, 45, 99, 0.1);
-  border-color: var(--color-primary-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(28, 45, 99, 0.1);
+  border-color: var(--color-secondary-accent); /* Mustard border on hover */
 }
 
 .internship-achievement-number {
-  width: 30px;
-  height: 30px;
-  background-color: var(--color-primary-accent);
-  color: var(--color-white);
+  width: 35px;
+  height: 35px;
+  background-color: var(--color-secondary-accent); /* Mustard */
+  color: var(--color-heading-text); /* Dark Text for contrast */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 1rem;
   flex-shrink: 0;
 }
 
 .internship-achievement-text {
   color: var(--color-primary-text);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
+/* --- Documents Section --- */
 .documents-section {
-  background-color: var(--color-card-background);
-  border-radius: var(--border-radius-md);
-  padding: 1.5rem;
-  border: 1px solid var(--color-border);
-}
-
-.documents-note {
-  color: var(--color-primary-text);
-  font-style: italic;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background-color: var(--color-hover);
-  border-radius: var(--border-radius-sm);
-  border-left: 4px solid var(--color-primary-accent);
+  background-color: var(--color-white);
+  padding-top: 1rem;
 }
 
 .documents-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Two columns on desktop */
+  gap: 1.5rem;
 }
 
 .document-item {
   background-color: var(--color-white);
-  border-radius: var(--border-radius-sm);
-  padding: 1rem;
+  border-radius: var(--border-radius-md);
+  padding: 1.25rem;
   border: 1px solid var(--color-border);
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Changed to column for better button placement */
   gap: 1rem;
   transition: var(--transition-standard);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
 .document-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(28, 45, 99, 0.1);
   border-color: var(--color-primary-accent);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .document-icon {
@@ -263,7 +279,7 @@
   align-items: center;
   justify-content: center;
   color: var(--color-primary-accent);
-  flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .document-info {
@@ -271,63 +287,17 @@
 }
 
 .document-name {
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
   color: var(--color-heading-text);
+  font-weight: 600;
 }
 
 .document-description {
-  font-size: 0.85rem;
-  color: var(--color-primary-text);
+  font-size: 0.9rem;
+  color: var(--color-dim-gray);
+  line-height: 1.5;
   margin: 0;
-}
-
-.document-status {
-  flex-shrink: 0;
-}
-
-.status-available {
-  color: var(--color-primary-accent);
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.status-pending {
-  color: var(--color-secondary-accent);
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-  .internship-page {
-    padding: 100px 0 60px;
-  }
-  
-  .page-title {
-    font-size: 2rem;
-  }
-  
-  .internship-header {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .internship-content-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .internship-achievements-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .period-location {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .period::after {
-    display: none;
-  }
 }
 
 

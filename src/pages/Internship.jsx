@@ -15,61 +15,57 @@ const Internship = () => {
   const internshipData = {
     title: "Transforming Production Planning Through Data Intelligence",
     company: "Estée Lauder Companies",
-    period: "September 2025 - December 2025",
+    period: "September 2025 - December 2025", // Adjusted based on typical fall semester, edit if needed
     location: "Oevel, Belgium",
     supervisor: "Wietse Beterams",
     summary: `
-      My internship project, "Transforming Production Planning Through Data Intelligence," was designed to address critical operational bottlenecks in the weekly planning meetings. 
-      The process was historically reactive and time-consuming, focused on manual data verification rather than strategy. 
+      Designed and delivered a dual-workstream project to address critical operational bottlenecks in weekly planning meetings. The initiative transformed a historically reactive, manual data validation process into an automated, strategic decision-making workflow.
       
-      I delivered two complementary solutions: 
-      1) An Enhanced Weekly Planning Report (Power BI) that acts as an automated violation tracker for 10 standard planning rules.
-      2) An AI Planning Assistant (Microsoft Copilot Studio) that enables natural language queries for data and procedural guidance.
+      The primary deliverable was an Enhanced Weekly Planning Report in Power BI that serves as an automated "Violation Tracker" for 10 complex planning rules. The secondary deliverable was a high-fidelity AI Planning Assistant prototype (built in Microsoft Copilot Studio) that enables natural language queries of live production data and procedural documentation, achieving a 100% success rate in technical benchmarking.
     `,
     keyResponsibilities: [
-      "Developed an automated Power BI 'Violation Tracker' using complex DAX logic to monitor 10 standard planning rules (e.g., Context-Aware Changeovers, Two-Step Duplicate Checks).",
-      "Conducted a comprehensive feasibility study comparing Microsoft Copilot Studio, OpenAI, and Custom Python solutions against enterprise security requirements.",
-      "Built a high-fidelity AI prototype using a Multi-Agent Architecture to route user intents between live Power BI data queries and SharePoint procedural documents.",
-      "Integrated an interactive Power App directly into the dashboard to allow planners to log 'Agreed Violations', creating a persistent audit trail.",
-      "Engineered prompt instructions with embedded database schemas to enable the AI to generate syntactically correct DAX queries dynamically."
+      "Engineered an automated Power BI 'Violation Tracker' using advanced DAX logic to monitor 10 standard planning rules (e.g., Context-Aware Changeovers, Two-Step Duplicate Checks).",
+      "Conducted a comprehensive technical feasibility study comparing Microsoft Copilot Studio, OpenAI, and Custom Python solutions against enterprise security requirements (Entra ID, In-Tenant Data Governance).",
+      "Architected a Multi-Agent AI prototype in Copilot Studio that routes user intents between live Power BI data queries and SharePoint procedural documents.",
+      "Developed and embedded a custom Power App to enable a 'Write-Back' workflow, allowing planners to log 'Agreed Violations' directly to a SharePoint backend.",
+      "Solved complex Data Model Ambiguity challenges by implementing virtual tables (ADDCOLUMNS, RANKX) to handle non-linear production sequences."
     ],
     technologiesUsed: [
       "Power BI",
-      "DAX (Data Analysis Expressions)", 
+      "Advanced DAX", 
       "Microsoft Copilot Studio",
       "Power Apps",
       "Microsoft Entra ID",
-      "SharePoint",
-      "Power Automate",
-      "Open AI Agent Builder"
+      "SharePoint Integration",
+      "Power Automate"
     ],
     achievements: [
-      "Transformed weekly meetings from reactive data validation sessions into proactive strategic decision-making forums.",
-      "Achieved 100% success rate in AI prototype benchmarking across 5 KPIs including Security Compliance, Query Accuracy, and Live Data Capability.",
-      "Solved the 'Data Model Ambiguity' challenge by implementing advanced DAX logic with virtual tables (ADDCOLUMNS, RANKX) to handle complex production sequences."
+      "Transformed weekly meetings from 30-minute manual data verification sessions into proactive strategic decision-making forums.",
+      "Achieved 100% success rate in AI prototype benchmarking across 5 KPIs, including Security Compliance, Query Accuracy, and Live Data Capability.",
+      "Created a 'Single Source of Truth' that eliminates hours of manual pre-meeting data compilation for the planning team."
     ],
     documents: [
       {
         name: "Project Plan",
-        description: "Initial plan outlining the internship tasks and timeline.",
+        description: "Strategic roadmap outlining business case, deliverables, and timeline.",
         available: true,
         fileUrl: "/documents/Project Plan.pdf" 
       },
       {
         name: "Summary Document", 
-        description: "Concise overview of the internship project and results.",
+        description: "Executive overview of the automated reporting tools and AI architecture.",
         available: true,
         fileUrl: "/documents/Summary Document.pdf"
       },
       {
         name: "Internship Realisation",
-        description: "Comprehensive detailed report of all internship activities.", 
+        description: "Comprehensive 87-page technical report detailing DAX logic and AI implementation.", 
         available: true,
         fileUrl: "/documents/Internship Realisation Document.pdf"
       },
       {
         name: "Reflection Document",
-        description: "Personal reflection on professional growth and skills acquired.", 
+        description: "Critical analysis of professional growth, technical challenges, and strategic pivoting.", 
         available: true,
         fileUrl: "/documents/Reflection Document.pdf"
       }
