@@ -2,26 +2,32 @@
   padding: 120px 0 80px;
   background-color: var(--color-background);
   color: var(--color-primary-text);
+  /* Prevent horizontal overflow */
+  overflow-x: hidden; 
+  width: 100%;
 }
 
 .page-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem; /* Slightly smaller for better mobile fit */
   text-align: center;
   margin-bottom: 3.5rem;
   color: var(--color-heading-text);
   font-weight: 700;
   letter-spacing: -0.5px;
+  padding: 0 1rem; /* Prevent text touching edges */
 }
 
 .internship-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  width: 100%; /* Ensure it takes full width */
+  box-sizing: border-box;
 }
 
 /* --- Header Section --- */
 .internship-header {
-  background-color: var(--color-card-background); /* Light Cream */
+  background-color: var(--color-card-background);
   border-radius: var(--border-radius-lg);
   padding: 2.5rem;
   margin-bottom: 3rem;
@@ -40,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-primary-accent); /* Dark Blue */
+  color: var(--color-primary-accent);
   font-size: 2rem;
   flex-shrink: 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -48,14 +54,16 @@
 
 .internship-info {
   flex-grow: 1;
+  width: 100%; /* Ensure info takes available space */
 }
 
 .internship-title {
   font-size: 2rem;
   margin-bottom: 0.75rem;
-  color: var(--color-heading-text); /* Midnight Blue */
+  color: var(--color-heading-text);
   font-weight: 700;
   line-height: 1.2;
+  word-wrap: break-word; /* Prevent long words breaking layout */
 }
 
 .company-info {
@@ -76,12 +84,13 @@
   color: var(--color-dim-gray);
   font-size: 0.95rem;
   font-family: var(--font-mono);
+  flex-wrap: wrap; /* Allow wrapping on very small screens */
 }
 
 .period::after {
   content: "•";
   margin-left: 1rem;
-  color: var(--color-secondary-accent); /* Mustard Yellow */
+  color: var(--color-secondary-accent);
 }
 
 .supervisor {
@@ -101,7 +110,7 @@
   font-size: 1.5rem;
   margin-bottom: 1.25rem;
   color: var(--color-heading-text);
-  border-bottom: 3px solid var(--color-secondary-accent); /* Mustard Underline */
+  border-bottom: 3px solid var(--color-secondary-accent);
   padding-bottom: 0.5rem;
   display: inline-block;
 }
@@ -110,7 +119,7 @@
 .summary-section {
   background-color: var(--color-white);
   border-radius: var(--border-radius-md);
-  padding: 0; /* Remove padding to blend with page, or add border if preferred */
+  padding: 0;
 }
 
 .summary-text {
@@ -123,13 +132,14 @@
 /* --- Grid for Responsibilities & Tech --- */
 .content-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  /* Default desktop view */
+  grid-template-columns: 2fr 1fr; 
   gap: 2rem;
 }
 
 /* Responsibilities */
 .responsibilities-section {
-  background-color: var(--color-card-background); /* Light Cream */
+  background-color: var(--color-card-background);
   border-radius: var(--border-radius-md);
   padding: 2rem;
   border: 1px solid var(--color-border);
@@ -158,9 +168,9 @@
   content: "➤";
   position: absolute;
   left: 0;
-  color: var(--color-secondary-accent); /* Mustard Bullet */
+  color: var(--color-secondary-accent);
   font-size: 0.8rem;
-  top: 1.1rem; /* Align with text */
+  top: 1.1rem;
 }
 
 /* Technologies */
@@ -205,7 +215,7 @@
 }
 
 .internship-achievement-card {
-  background-color: var(--color-card-background); /* Light Cream */
+  background-color: var(--color-card-background);
   border-radius: var(--border-radius-md);
   padding: 1.5rem;
   border: 1px solid var(--color-border);
@@ -218,14 +228,14 @@
 .internship-achievement-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(28, 45, 99, 0.1);
-  border-color: var(--color-secondary-accent); /* Mustard border on hover */
+  border-color: var(--color-secondary-accent);
 }
 
 .internship-achievement-number {
   width: 35px;
   height: 35px;
-  background-color: var(--color-secondary-accent); /* Mustard */
-  color: var(--color-heading-text); /* Dark Text for contrast */
+  background-color: var(--color-secondary-accent);
+  color: var(--color-heading-text);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -249,7 +259,8 @@
 
 .documents-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Two columns on desktop */
+  /* CHANGED: Reduced minmax to 280px to fit on mobile screens */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
@@ -259,7 +270,7 @@
   padding: 1.25rem;
   border: 1px solid var(--color-border);
   display: flex;
-  flex-direction: column; /* Changed to column for better button placement */
+  flex-direction: column;
   gap: 1rem;
   transition: var(--transition-standard);
   box-shadow: 0 4px 10px rgba(0,0,0,0.03);
@@ -300,21 +311,24 @@
   margin: 0;
 }
 
-
 /* Document Action Styles */
 .document-actions {
   flex-shrink: 0;
-  min-width: 140px; /* Increased slightly to fit two buttons */
+  min-width: 180px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  height: 40px; 
+  margin-top: auto; /* Push to bottom of card */
 }
 
-/* Container for the two buttons */
 .action-buttons-group {
   display: flex;
-  gap: 0.5rem;
-  animation: fadeIn 0.2s ease-in-out;
+  align-items: center;
+  gap: 1rem; 
+  width: 100%;
+  justify-content: flex-end;
+  animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .action-btn {
@@ -324,29 +338,28 @@
   cursor: pointer;
   font-weight: 500;
   font-size: 0.9rem;
-  transition: var(--transition-standard);
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  text-decoration: none; /* For the anchor tags */
+  text-decoration: none;
   white-space: nowrap;
 }
 
-/* Specific styling for the initial Access button */
 .access-btn {
   background-color: var(--color-primary-accent);
   color: var(--color-white);
-  width: 100%;
+  width: 100%; 
 }
 
 .access-btn:hover {
   background-color: var(--color-secondary-accent);
+  transform: translateY(-1px);
 }
 
-/* Specific styling for the View button */
 .view-btn {
-  background-color: var(--color-hover);
+  background-color: transparent;
   color: var(--color-primary-accent);
   border: 1px solid var(--color-primary-accent);
 }
@@ -356,37 +369,87 @@
   color: var(--color-white);
 }
 
-/* Specific styling for the Download button */
 .download-btn {
   background-color: var(--color-primary-accent);
   color: var(--color-white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .download-btn:hover {
   background-color: var(--color-secondary-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(20px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
-/* Update responsive behavior */
+/* --- MOBILE RESPONSIVE FIXES --- */
 @media (max-width: 768px) {
-  .document-item {
-    flex-direction: column;
-    align-items: flex-start;
+  .internship-page {
+    padding: 100px 0 60px;
   }
   
+  .page-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .internship-container {
+    padding: 0 1rem; /* Smaller padding on mobile */
+  }
+  
+  /* Stack header items */
+  .internship-header {
+    flex-direction: column;
+    align-items: center; /* Center content */
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .company-info {
+    align-items: center; /* Center company info */
+  }
+
+  .period-location {
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .period::after {
+    display: none; /* Hide separator on mobile */
+  }
+
+  /* Stack Content Grid (Responsibilities top, Tech bottom) */
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Stack Achievements */
+  .internship-achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Documents responsiveness */
+  .documents-list {
+    grid-template-columns: 1fr; /* Full width cards on mobile */
+  }
+
   .document-actions {
     width: 100%;
-    margin-top: 1rem;
-    justify-content: flex-start;
+    justify-content: center; /* Center buttons on mobile */
   }
 
   .action-buttons-group {
-    width: 100%;
-    /* On mobile, stack them or keep side-by-side? Side-by-side is usually better for buttons */
-    justify-content: flex-start; 
+    justify-content: space-between; /* Spread view/download buttons */
+  }
+  
+  .action-btn {
+    flex: 1; /* Buttons take equal width */
   }
 }
