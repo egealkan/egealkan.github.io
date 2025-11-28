@@ -112,7 +112,7 @@ const Header = () => {
                 Education
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink 
                 to="/personal-info" 
                 className={({ isActive }) => isActive ? 'active' : ''}
@@ -120,7 +120,7 @@ const Header = () => {
               >
                 Personal Info
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </nav>
         
