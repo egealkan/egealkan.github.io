@@ -305,3 +305,30 @@
     max-width: 100%;
   }
 }
+
+.learnings-section {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(var(--primary-rgb), 0.05); /* Subtle tint */
+  border-left: 3px solid var(--primary-color);
+  border-radius: 0 8px 8px 0;
+}
+
+.project-learning-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Ensure the grid handles the extra content gracefully */
+@media (min-width: 768px) {
+  .project-details-grid {
+    display: grid;
+    /* You might want to adjust your grid columns if needed, 
+       but stacking Features -> Learnings -> Tech usually looks best 
+       unless you want Learnings side-by-side with Features */
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  }
+}

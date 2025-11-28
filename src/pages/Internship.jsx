@@ -17,7 +17,6 @@ const Internship = () => {
     company: "Estée Lauder Companies",
     period: "September 2025 - December 2025", // Adjusted based on typical fall semester, edit if needed
     location: "Oevel, Belgium",
-    mentor: "Wietse Beterams",
     summary: `
       Designed and delivered a dual-workstream project to address critical operational bottlenecks in weekly planning meetings. The initiative transformed a historically reactive, manual data validation process into an automated, strategic decision-making workflow.
       
@@ -44,6 +43,16 @@ const Internship = () => {
       "Transformed weekly meetings from 30-minute manual data verification sessions into proactive strategic decision-making forums.",
       "Achieved 100% success rate in AI prototype benchmarking across 5 KPIs, including Security Compliance, Query Accuracy, and Live Data Capability.",
       "Created a 'Single Source of Truth' that eliminates hours of manual pre-meeting data compilation for the planning team."
+    ],
+    learnings: [
+      "Learned to balance technical perfection with business practicality by pivoting from OpenAI to Copilot Studio to meet strict Enterprise Security governance.",
+      "Mastered the use of Virtual Tables in DAX to solve complex data model ambiguity challenges that standard relationships could not handle.",
+      "Gained experience in navigating corporate IT structures and conducting feasibility studies to drive architectural decisions.",
+      "Learned to unify the Power Platform stack by embedding Power Apps within Power BI, creating a seamless 'write-back' loop that bridges the gap between passive analytics and active workflow management.",
+      "Gained deep expertise in DAX context transition and row-level evaluation, specifically by implementing virtual ranking tables to solve non-linear production sequence logic that standard data models could not handle.",
+      "Developed advanced prompt engineering techniques for Microsoft Copilot Studio, learning how to structure agent instructions to ensure consistent, accurate retrieval from unstructured SharePoint documents.",
+      "Understood the impact of digital transformation on human workflows, learning that successful tool deployment requires user-centric design to shift teams from manual verification to strategic decision-making.",
+      "Improved the ability to translate abstract business needs (like 'reactive meetings') into concrete technical deliverables, effectively bridging the gap between operational planning and data engineering."
     ],
     documents: [
       {
@@ -92,9 +101,6 @@ const Internship = () => {
                   <span className="period">{internshipData.period}</span>
                   <span className="location">{internshipData.location}</span>
                 </div>
-                <div className="supervisor">
-                  <strong>Mentor:</strong> {internshipData.mentor}
-                </div>
               </div>
             </div>
           </div>
@@ -135,6 +141,15 @@ const Internship = () => {
                   </div>
                 ))}
               </div>
+            </section>
+
+            <section className="internship-learnings-section" style={{marginTop: '2rem'}}>
+              <h3 className="section-title">Key Takeaways & Growth</h3>
+              <ul className="responsibility-list"> {/* Reusing list style for consistency */}
+                {internshipData.learnings.map((item, index) => (
+                  <li key={index} className="responsibility-item">{item}</li>
+                ))}
+              </ul>
             </section>
             
             <section className="documents-section">

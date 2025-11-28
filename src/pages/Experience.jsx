@@ -13,6 +13,7 @@ const Experience = () => {
       githubUrl: 'https://github.com/egealkan/ai-projects/tree/main/NLP_Challenge',
       pdfUrl: '/documents/AI Chatbot Development.pdf', 
       videoUrl: 'https://youtu.be/M9aw8EZfyfc', 
+      learnings: 'Mastered the orchestration of multi-agent systems using CrewAI and learned how to manage long-term conversation context efficiently using vector databases (Qdrant) and RAG pipelines.',
       // Mapped to 'keyFeatures' logic in render
       steps: [
         {
@@ -39,6 +40,7 @@ const Experience = () => {
       description: 'A dedicated research project focused on mastering the mathematical foundations of deep learning by building a neural network library entirely from scratch. By not using high-level frameworks like PyTorch or TensorFlow, I implemented core components using only Python and NumPy. This "first-principles" approach involved manually coding forward and backward propagation algorithms, activation functions, and optimizers to gain a granular understanding of how neural networks learn and converge on non-linear datasets.',
       tags: ['Python', 'NumPy', 'Mathematics', 'Deep Learning', 'Backpropagation', 'Optimization'],
       githubUrl: 'https://github.com/egealkan/AI-Projects/tree/main/AI_Practice_and_Math',
+      learnings: 'Gained a deep understanding of the calculus behind backpropagation and gradient descent by implementing them without auto-differentiation libraries, reinforcing the mathematical foundations of AI.',
       steps: [
         {
           title: 'Core Architecture',
@@ -64,6 +66,7 @@ const Experience = () => {
       description: 'An ambitious ongoing personal research project aimed at building a complete "Digital Physics Laboratory" to simulate high-energy particle collisions similar to those at the Large Hadron Collider (LHC). Unlike standard data analysis projects, this system simulates its own raw physics data using industry-standard tools like PYTHIA8 and ROOT. I am currently developing a multi-stage AI pipeline designed to "rediscover" known particles (like the Z and Higgs bosons) and detect potential "new physics" via unsupervised anomaly detection. The project is being architected as a full-stack application with a FastAPI backend and an immersive 3D frontend, working towards creating an autonomous scientific assistant.',
       tags: ['Python', 'PyTorch', 'PYTHIA8', 'ROOT (CERN)', 'FastAPI', 'Three.js', 'Anomaly Detection', 'SciPy'],
       githubUrl: 'https://github.com/egealkan/particle_accelerator',
+      learnings: 'Learned to bridge the gap between theoretical physics simulations (Monte Carlo) and modern AI, specifically applying unsupervised anomaly detection to identify statistical outliers in high-energy datasets.',
       steps: [
         {
           title: 'High-Energy Physics Engine',
@@ -90,6 +93,7 @@ const Experience = () => {
       tags: ['Python', 'FastAI', 'PyTorch', 'OpenCV', 'ResNet CNN', 'LSTM', 'YOLOv8', 'Data Augmentation'],
       githubUrl: 'https://github.com/egealkan/ai-projects/tree/main/Computer_Vision_Challenge',
       pdfUrl: '/documents/Autonomous-Driving-Project-Presentation.pdf',
+      learnings: 'Understood the critical importance of data balancing and augmentation in imitation learning, and learned optimization techniques like Mixed Precision training to accelerate model convergence.',
       steps: [
         {
           title: 'Data Collection & Pipeline',
@@ -115,6 +119,7 @@ const Experience = () => {
       description: 'An innovative AI-powered "talking bench" installation developed for Rurant to gather community feedback on rural planning. As the AI Lead, I architected the conversational core using Google Gemini and FastAPI. The system engages citizens in natural, open-ended dialogues, collecting their opinions while analyzing emotional sentiment in real-time. This feedback is then processed to provide city planners with actionable insights into public sentiment regarding specific locations.',
       tags: ['Python', 'FastAPI', 'Google Gemini AI', 'Google Cloud STT/TTS', 'Emotion Analysis', 'Docker', 'React', 'Raspberry Pi'],
       githubUrl: 'https://github.com/egealkan/AI-Projects/tree/main/Project_4.0_Talking_Bench',
+      learnings: 'Learned to architect a hybrid IoT-Cloud solution, handling the challenges of real-time audio processing and latency management when integrating hardware (Raspberry Pi) with LLM APIs.',
       steps: [
         {
           title: 'Conversational AI Engine',
@@ -142,6 +147,7 @@ const Experience = () => {
       links: {
         demo: "https://skill2.bragi.be"
       },
+      learnings: 'Experienced the complexity of designing secure Role-Based Access Control (RBAC) systems and managing full-stack MVC architecture within a collaborative agile team environment.',
       steps: [
         {
           title: 'Role-Based Access Control',
@@ -211,6 +217,13 @@ const Experience = () => {
                         ))
                       )}
                     </ul>
+                  </div>
+
+                  <div className="learnings-section">
+                    <h3 className="section-heading">What I Learned</h3>
+                    <p className="project-learning-text">
+                      {project.learnings}
+                    </p>
                   </div>
                   
                   <div className="tech-section">
