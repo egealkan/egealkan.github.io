@@ -13,7 +13,7 @@ const Experience = () => {
       githubUrl: 'https://github.com/egealkan/ai-projects/tree/main/NLP_Challenge',
       pdfUrl: '/documents/AI Chatbot Development.pdf', 
       videoUrl: 'https://youtu.be/M9aw8EZfyfc', 
-      learnings: 'Mastered the orchestration of multi-agent systems using CrewAI and learned how to manage long-term conversation context efficiently using vector databases (Qdrant) and RAG pipelines.',
+      learnings: 'Implemented the orchestration of multi-agent systems using CrewAI and learned how to manage long-term conversation context efficiently using vector databases (Qdrant) and RAG pipelines. I discovered that the hardest part of RAG isn\'t retrieval, but the "lost in the middle" phenomenon where agents ignore context. I learned to solve this by implementing strict context-window management and re-ranking, moving beyond simple vector similarity to semantic relevance.',
       // Mapped to 'keyFeatures' logic in render
       steps: [
         {
@@ -40,7 +40,7 @@ const Experience = () => {
       description: 'A dedicated research project focused on mastering the mathematical foundations of deep learning by building a neural network library entirely from scratch. By not using high-level frameworks like PyTorch or TensorFlow, I implemented core components using only Python and NumPy. This "first-principles" approach involved manually coding forward and backward propagation algorithms, activation functions, and optimizers to gain a granular understanding of how neural networks learn and converge on non-linear datasets.',
       tags: ['Python', 'NumPy', 'Mathematics', 'Deep Learning', 'Backpropagation', 'Optimization'],
       githubUrl: 'https://github.com/egealkan/AI-Projects/tree/main/AI_Practice_and_Math',
-      learnings: 'Gained a deep understanding of the calculus behind backpropagation and gradient descent by implementing them without auto-differentiation libraries, reinforcing the mathematical foundations of AI.',
+      learnings: 'Gained a deep understanding of the calculus behind backpropagation and gradient descent by implementing them without auto-differentiation libraries, reinforcing the mathematical foundations of AI. Writing backpropagation by hand taught me that "vanishing gradients" isn\'t just a textbook concept but a tangible bug caused by poor weight initialization. I learned to manually derive chain rule derivatives, which completely changed how I debug convergence issues in modern frameworks like PyTorch.',
       steps: [
         {
           title: 'Core Architecture',
@@ -66,7 +66,7 @@ const Experience = () => {
       description: 'An ambitious ongoing personal research project aimed at building a complete "Digital Physics Laboratory" to simulate high-energy particle collisions similar to those at the Large Hadron Collider (LHC). Unlike standard data analysis projects, this system simulates its own raw physics data using industry-standard tools like PYTHIA8 and ROOT. I am currently developing a multi-stage AI pipeline designed to "rediscover" known particles (like the Z and Higgs bosons) and detect potential "new physics" via unsupervised anomaly detection. The project is being architected as a full-stack application with a FastAPI backend and an immersive 3D frontend, working towards creating an autonomous scientific assistant.',
       tags: ['Python', 'PyTorch', 'PYTHIA8', 'ROOT (CERN)', 'FastAPI', 'Three.js', 'Anomaly Detection', 'SciPy'],
       githubUrl: 'https://github.com/egealkan/particle_accelerator',
-      learnings: 'Learned to bridge the gap between theoretical physics simulations (Monte Carlo) and modern AI, specifically applying unsupervised anomaly detection to identify statistical outliers in high-energy datasets.',
+      learnings: 'I learned that in high-energy physics, "accuracy" is less important than "explainability." Implementing unsupervised detection taught me to validate model outputs against theoretical Monte Carlo baselines, bridging the gap between black-box AI and rigorous scientific standards. I Learned to bridge the gap between theoretical physics simulations (Monte Carlo) and modern AI, specifically applying unsupervised anomaly detection to identify statistical outliers in high-energy datasets.',
       steps: [
         {
           title: 'High-Energy Physics Engine',
@@ -93,7 +93,7 @@ const Experience = () => {
       tags: ['Python', 'FastAI', 'PyTorch', 'OpenCV', 'ResNet CNN', 'LSTM', 'YOLOv8', 'Data Augmentation'],
       githubUrl: 'https://github.com/egealkan/ai-projects/tree/main/Computer_Vision_Challenge',
       pdfUrl: '/documents/Autonomous-Driving-Project-Presentation.pdf',
-      learnings: 'Understood the critical importance of data balancing and augmentation in imitation learning, and learned optimization techniques like Mixed Precision training to accelerate model convergence.',
+      learnings: 'Understood the critical importance of data balancing and augmentation in imitation learning, and learned optimization techniques like Mixed Precision training to accelerate model convergence. I realized that imitation learning is fragile; the model initially memorized the track background rather than road features. This forced me to implement aggressive augmentation strategies (shadows, flips), teaching me that a robust dataset is far more critical than a complex architecture for generalization.',
       steps: [
         {
           title: 'Data Collection & Pipeline',
@@ -119,7 +119,7 @@ const Experience = () => {
       description: 'An innovative AI-powered "talking bench" installation developed for Rurant to gather community feedback on rural planning. As the AI Lead, I architected the conversational core using Google Gemini and FastAPI. The system engages citizens in natural, open-ended dialogues, collecting their opinions while analyzing emotional sentiment in real-time. This feedback is then processed to provide city planners with actionable insights into public sentiment regarding specific locations.',
       tags: ['Python', 'FastAPI', 'Google Gemini AI', 'Google Cloud STT/TTS', 'Emotion Analysis', 'Docker', 'React', 'Raspberry Pi'],
       githubUrl: 'https://github.com/egealkan/AI-Projects/tree/main/Project_4.0_Talking_Bench',
-      learnings: 'Learned to architect a hybrid IoT-Cloud solution, handling the challenges of real-time audio processing and latency management when integrating hardware (Raspberry Pi) with LLM APIs.',
+      learnings: 'Learned to architect a hybrid IoT-Cloud solution, handling the challenges of real-time audio processing and latency management when integrating hardware (Raspberry Pi) with LLM APIs. Integrating a Raspberry Pi with LLMs taught me that network latency is the biggest bottleneck in voice interfaces. I learned to optimize the audio buffer streams and implement local processing where possible to shave off critical milliseconds, creating a fluid conversation loop rather than just a request-response cycle.',
       steps: [
         {
           title: 'Conversational AI Engine',
@@ -147,7 +147,7 @@ const Experience = () => {
       links: {
         demo: "https://skill2.bragi.be"
       },
-      learnings: 'Experienced the complexity of designing secure Role-Based Access Control (RBAC) systems and managing full-stack MVC architecture within a collaborative agile team environment.',
+      learnings: 'Experienced the complexity of designing secure Role-Based Access Control (RBAC) systems and managing full-stack MVC architecture within a collaborative agile team environment. I learned that tight coupling between UI and logic kills scalability. By refactoring our monolithic controllers into a service-based architecture mid-project, I understood the tangible value of Dependency Injection not just for testing, but for allowing multiple developers to work on the same feature without conflicts.',
       steps: [
         {
           title: 'Role-Based Access Control',
