@@ -183,6 +183,13 @@
   gap: 2rem;
 }
 
+.project-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
 .project-links {
   display: flex;
   gap: 1rem;
@@ -280,9 +287,10 @@
   }
 
   .project-footer {
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
     gap: 1.5rem;
+    margin-top: 2rem;
   }
 
   .project-links {

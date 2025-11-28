@@ -101,10 +101,10 @@
 .year-title {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
-  color: var(--color-midnight-blue); /* Dark blue title */
+  color: var(--color-mustard-yellow); /* Dark blue title */
   text-align: center;
   padding: 0.5rem;
-  background-color: var(--color-mustard-yellow); /* Yellow background */
+  background-color: var(--color-midnight-blue); /* Yellow background */
   border-radius: var(--border-radius-sm);
   font-weight: 700;
 }
@@ -116,8 +116,8 @@
 }
 
 .course-item {
-  background-color: var(--color-midnight-blue); /* Dark blue background */
-  color: var(--color-mustard-yellow); /* Yellow text */
+  background-color: var(--color-white); 
+  color: var(--color-midnight-blue); 
   padding: 0.75rem 1rem;
   border-radius: var(--border-radius-sm);
   transition: all 0.3s ease;
@@ -131,7 +131,7 @@
   color: var(--color-midnight-blue); /* Dark blue text on hover */
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(227, 206, 15, 0.3);
-  border-color: var(--color-mustard-yellow);
+  border-color: var(--color-midnight-blue);
 }
 
 .course-name {

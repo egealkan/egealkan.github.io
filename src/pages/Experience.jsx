@@ -1,117 +1,3 @@
-// import ProjectCard from '../components/ui/ProjectCard';
-// import './Experience.css';
-
-// const Experience = () => {
-//   const projects = [
-//     {
-//       title: 'Deep Learning NLP Challenge',
-//       description: 'Developed an AI-powered learning assistant that transforms educational content into interactive study tools. The system ingests various content formats (PDFs, YouTube videos, web resources) and enables users to interact through natural language conversations.',
-//       tags: ['Vector Database (Qdrant)', 'Content Agents', 'Voice Interaction (Whisper & TTS)', 'Long-term Memory', 'Interactive Study Tools'],
-//       steps: [
-//         {
-//           title: 'Content Processing Pipeline',
-//           description: 'Built specialized agents to process multiple content types including PDFs, YouTube transcripts, and web content, converting them into searchable vector embeddings.'
-//         },
-//         {
-//           title: 'Voice-Enabled Interface',
-//           description: 'Integrated OpenAI\'s Whisper for speech recognition and Google\'s TTS for natural-sounding responses, enabling conversational learning experiences.'
-//         },
-//         {
-//           title: 'Persistent Memory System',
-//           description: 'Developed a robust database-backed memory system that maintains conversation context across multiple sessions for personalized interactions.'
-//         },
-//         {
-//           title: 'Advanced Study Tools',
-//           description: 'Created cheat sheet generators and interactive quiz systems with detailed feedback mechanisms to enhance the learning experience.'
-//         }
-//       ]
-//     },
-//     {
-//       title: 'Frank de Bank - BenchMark',
-//       description: 'Developed an innovative AI-powered talking bench for Rurant that engages with citizens to gather feedback about public spaces. This interactive installation uses conversational AI to create meaningful interactions while collecting valuable community insights.',
-//       tags: ['Google Gemini AI', 'Speech-to-Text/Text-to-Speech', 'Emotion Analysis', 'RESTful API (FastAPI)', 'Analytics Dashboard'],
-//       steps: [
-//         {
-//           title: 'Conversational AI Integration',
-//           description: 'Implemented Google\'s Gemini AI to power natural, contextual conversations with bench users, creating an approachable interface for community feedback.'
-//         },
-//         {
-//           title: 'Multi-modal Interaction',
-//           description: 'Built a comprehensive speech processing system that handles voice input in noisy environments and generates natural-sounding responses.'
-//         },
-//         {
-//           title: 'User Sentiment Analysis',
-//           description: 'Developed emotion detection capabilities to analyze user sentiment during conversations, allowing the bench to respond appropriately to emotional cues.'
-//         },
-//         {
-//           title: 'Data Analytics System',
-//           description: 'Created a robust backend that tracks conversation topics, user engagement metrics, and feedback trends to provide actionable insights for city planners.'
-//         }
-//       ]
-//     },
-//     {
-//       title: 'Computer Vision Challenge: Autonomous Driving',
-//       description: 'Developed a deep learning system that enables autonomous driving in the Trackmania racing game using computer vision techniques. The system captures gameplay in real-time, analyzes visual data, and makes driving decisions to navigate the track.',
-//       tags: ['ResNet CNN Architecture', 'Real-time Control', 'Data Augmentation', 'Advanced Training Techniques', 'YOLO Object Detection'],
-//       steps: [
-//         {
-//           title: 'Data Capture & Preprocessing',
-//           description: 'Created a robust pipeline for capturing, preprocessing, and augmenting game frames to train the model on various driving scenarios and conditions.'
-//         },
-//         {
-//           title: 'Model Architecture Exploration',
-//           description: 'Implemented and compared multiple ResNet models (18, 34, 50) for optimal image classification performance in dynamic racing environments.'
-//         },
-//         {
-//           title: 'Performance Optimization',
-//           description: 'Applied advanced training techniques including learning rate scheduling, dropout regularization, and mixed precision training to improve model accuracy.'
-//         },
-//         {
-//           title: 'Real-time Control System',
-//           description: 'Built a system that translates model predictions into game controls with minimal latency, allowing for real-time autonomous driving.'
-//         }
-//       ]
-//     }
-//   ];
-
-//   return (
-//     <div className="experience-page">
-//       <div className="container">
-//         <h1 className="page-title">Project Showcases</h1>
-//         <p className="page-subtitle">Explore my featured projects through interactive roadmaps and descriptions</p>
-        
-//         <div className="projects-container">
-//           {projects.map((project, index) => (
-//             <div key={index} className="project-wrapper">
-//               <ProjectCard project={project} />
-              
-//               {/* Video showcase for each project */}
-//               <div className="video-showcase">
-//                 <div className="video-container">
-//                   <div className="video-placeholder">
-//                     <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                       <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-//                       <path d="M10 8L16 12L10 16V8Z" fill="currentColor"/>
-//                     </svg>
-//                     <span>Watch {project.title} demo</span>
-//                   </div>
-//                 </div>
-//               </div>
-//               <br />
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Experience;
-
-
-
-
-
 import { BsGithub, BsPlayCircle, BsLink45Deg, BsCodeSlash } from "react-icons/bs";
 import './Experience.css';
 
@@ -119,117 +5,162 @@ const Experience = () => {
   const projects = [
     {
       title: 'Deep Learning NLP Challenge',
-      category: 'Artificial Intelligence & NLP',
-      summary: 'Developed an AI-powered learning assistant that transforms educational content into interactive study tools. The system ingests various content formats (PDFs, YouTube videos, web resources) and enables users to interact through natural language conversations, effectively acting as a personalized tutor.',
-      keyFeatures: [
-        'Built specialized agents to process PDFs, YouTube transcripts, and web content into vector embeddings.',
-        'Integrated OpenAI Whisper for speech recognition and Google TTS for natural voice interaction.',
-        'Engineered a persistent memory system using vector databases to maintain conversation context.',
-        'Implemented automated quiz generation and "cheat sheet" creation algorithms.'
-      ],
-      technologies: ['Python', 'Qdrant (Vector DB)', 'OpenAI Whisper', 'LangChain', 'React', 'FastAPI'],
-      links: {
-        github: "https://github.com/yourusername/project",
-        demo: null, // Set to URL if available
-        video: true // Set to true to show video placeholder
-      }
+      year: '2024',
+      // Mapped to 'summary' in render
+      description: 'Developed an advanced AI-powered learning assistant that transforms educational content into interactive study tools. Utilizing a multi-agent architecture powered by CrewAI and LangChain, the system ingests various formats (PDFs, YouTube videos, web resources) to provide personalized summaries, Q&A, and generated quizzes. The project features a voice-enabled interface using OpenAI Whisper and maintains long-term conversation context via a Qdrant vector database.',
+      // Mapped to 'technologies' in render
+      tags: ['Python', 'LangChain', 'CrewAI', 'Qdrant (Vector DB)', 'Groq API', 'OpenAI Whisper', 'React', 'FastAPI'],
+      githubUrl: 'https://github.com/egealkan/ai-projects/tree/main/NLP_Challenge',
+      pdfUrl: '/documents/AI Chatbot Development.pdf', 
+      videoUrl: 'https://youtu.be/M9aw8EZfyfc', 
+      // Mapped to 'keyFeatures' logic in render
+      steps: [
+        {
+          title: 'Multi-Agent Orchestration',
+          description: 'Designed a robust agentic workflow using CrewAI, coordinating specialized agents (Content, QA, Research) to autonomously process materials and generate structured outputs.'
+        },
+        {
+          title: 'RAG & Vector Search',
+          description: 'Implemented a Retrieval-Augmented Generation (RAG) pipeline with Qdrant and LangChain to efficiently store and retrieve high-dimensional embeddings from course materials.'
+        },
+        {
+          title: 'Voice & Multimodal Interface',
+          description: 'Integrated OpenAI Whisper for accurate speech-to-text and Google gTTS for text-to-speech, creating a seamless hands-free conversational learning experience.'
+        },
+        {
+          title: 'Dynamic Study Tools',
+          description: 'Built a React-integrated frontend to render interactive quizzes and cheat sheets generated by the AI, resolving state management limitations found in Streamlit.'
+        }
+      ]
     },
     {
-      title: 'Frank de Bank - BenchMark',
-      category: 'IoT & Conversational AI',
-      summary: 'An innovative AI-powered "talking bench" installation for Rurant that engages citizens to gather feedback about public spaces. This project combined physical hardware with advanced conversational AI to create meaningful, emotion-aware interactions with the community.',
-      keyFeatures: [
-        'Integrated Google Gemini AI to power natural, open-ended conversations with bench users.',
-        'Developed a robust speech processing pipeline capable of handling noisy outdoor environments.',
-        'Implemented real-time sentiment analysis to detect user emotion and adapt the AI persona accordingly.',
-        'Created an analytics dashboard for city planners to visualize community feedback trends.'
-      ],
-      technologies: ['Google Gemini', 'Python', 'Raspberry Pi', 'FastAPI', 'Sentiment Analysis', 'React'],
-      links: {
-        github: "https://github.com/yourusername/project",
-        demo: "https://demo-link.com",
-        video: true
-      }
+      title: 'Neural Networks from Scratch',
+      year: '2025',
+      description: 'A dedicated research project focused on mastering the mathematical foundations of deep learning by building a neural network library entirely from scratch. By not using high-level frameworks like PyTorch or TensorFlow, I implemented core components using only Python and NumPy. This "first-principles" approach involved manually coding forward and backward propagation algorithms, activation functions, and optimizers to gain a granular understanding of how neural networks learn and converge on non-linear datasets.',
+      tags: ['Python', 'NumPy', 'Mathematics', 'Deep Learning', 'Backpropagation', 'Optimization'],
+      githubUrl: 'https://github.com/egealkan/AI-Projects/tree/main/AI_Practice_and_Math',
+      steps: [
+        {
+          title: 'Core Architecture',
+          description: 'Implemented fully-connected (dense) layers using matrix operations in NumPy, handling weight initialization and bias implementation manually to structure the network.'
+        },
+        {
+          title: 'Activation Functions',
+          description: 'Coded non-linear activation functions from scratch, including ReLU (for hidden layers) and Softmax (for output probability distribution), ensuring numerical stability during calculations.'
+        },
+        {
+          title: 'Backpropagation Engine',
+          description: 'Engineered the complete backward pass logic to calculate partial derivatives and gradients for all components, enabling the network to learn via the chain rule.'
+        },
+        {
+          title: 'Loss & Optimization',
+          description: 'Developed a custom Categorical Cross-Entropy loss function and a Stochastic Gradient Descent (SGD) optimizer to measure error and update model parameters iteratively.'
+        }
+      ]
+    },
+    {
+      title: 'AI-Powered Particle Accelerator Simulation',
+      year: '2025 - Present',
+      description: 'An ambitious ongoing personal research project aimed at building a complete "Digital Physics Laboratory" to simulate high-energy particle collisions similar to those at the Large Hadron Collider (LHC). Unlike standard data analysis projects, this system simulates its own raw physics data using industry-standard tools like PYTHIA8 and ROOT. I am currently developing a multi-stage AI pipeline designed to "rediscover" known particles (like the Z and Higgs bosons) and detect potential "new physics" via unsupervised anomaly detection. The project is being architected as a full-stack application with a FastAPI backend and an immersive 3D frontend, working towards creating an autonomous scientific assistant.',
+      tags: ['Python', 'PyTorch', 'PYTHIA8', 'ROOT (CERN)', 'FastAPI', 'Three.js', 'Anomaly Detection', 'SciPy'],
+      githubUrl: 'https://github.com/egealkan/particle_accelerator',
+      steps: [
+        {
+          title: 'High-Energy Physics Engine',
+          description: 'Engineering a robust simulation pipeline using the PYTHIA8 Monte Carlo generator to produce realistic collision events. Work is underway to integrate CERN\'s ROOT framework for high-performance data processing, enabling the extraction of complex kinematic properties.'
+        },
+        {
+          title: 'AI Discovery Pipeline',
+          description: 'Building and training specialized neural networks to act as a "Digital Physicist." This involves developing binary classifiers for identifying specific decay signatures and autoencoder-based anomaly detection systems to flag statistically significant outliers.'
+        },
+        {
+          title: 'Interactive 3D Laboratory',
+          description: 'Developing a real-time visualization interface using React and Three.js. The goal is to render particle decay chains in a 3D interactive space, allowing users to visually inspect momentum vectors and energy deposits.'
+        },
+        {
+          title: 'Automated Research Reporting',
+          description: 'Implementing an NLP-driven analysis engine to process statistical output. The system is being designed to automatically generate human-readable reports, calculate statistical significance, and visualize invariant mass distributions to automate scientific discovery.'
+        }
+      ]
     },
     {
       title: 'Autonomous Driving CV Challenge',
-      category: 'Computer Vision & Deep Learning',
-      summary: 'Developed a deep learning system that enables autonomous driving in the Trackmania racing game. The model uses computer vision to analyze gameplay frames in real-time and predict steering and throttle controls to navigate complex tracks without human intervention.',
-      keyFeatures: [
-        'Created a low-latency pipeline for capturing and preprocessing game frames in real-time.',
-        'Trained and compared multiple ResNet architectures (18, 34, 50) for optimal steering prediction.',
-        'Applied data augmentation and mixed precision training to improve model generalization.',
-        'Implemented a control system mapping neural network outputs to virtual game controller inputs.'
-      ],
-      technologies: ['PyTorch', 'OpenCV', 'ResNet CNN', 'YOLO', 'Data Augmentation', 'Python'],
-      links: {
-        github: "https://github.com/yourusername/project",
-        video: true
-      }
-    },
-    // --- NEW PROJECT PLACEHOLDERS ---
-    {
-      title: 'Enterprise Inventory Management System',
-      category: 'Full Stack Development',
-      summary: 'Designed a scalable inventory tracking application for a logistics client. The system replaced manual spreadsheet tracking with a centralized cloud database, featuring real-time stock alerts, barcode scanning integration, and automated reporting capabilities.',
-      keyFeatures: [
-        'Designed a RESTful API architecture handling over 10,000 daily transactions.',
-        'Implemented role-based authentication and secure data access protocols.',
-        'Built a responsive React frontend with interactive data visualization charts.',
-        'Automated daily PDF report generation and email distribution to stakeholders.'
-      ],
-      technologies: ['Node.js', 'React', 'PostgreSQL', 'Docker', 'JWT Auth', 'Redis'],
-      links: {
-        github: "https://github.com/yourusername/project",
-        demo: "#"
-      }
+      year: '2024',
+      description: 'Developed a deep learning-based autonomous driving system for the Trackmania racing game using computer vision. The goal was to navigate a vehicle in real-time using only visual input. I engineered a custom data pipeline to capture gameplay and trained various Convolutional Neural Network (CNN) architectures, including ResNet-34, ResNet-50, and CNN-LSTM hybrids, to predict steering and throttle commands. The project utilized advanced training techniques like one-cycle learning rates and mixed precision to achieve high accuracy on validation datasets.',
+      tags: ['Python', 'FastAI', 'PyTorch', 'OpenCV', 'ResNet CNN', 'LSTM', 'YOLOv8', 'Data Augmentation'],
+      githubUrl: 'https://github.com/egealkan/ai-projects/tree/main/Computer_Vision_Challenge',
+      pdfUrl: '/documents/Autonomous-Driving-Project-Presentation.pdf',
+      steps: [
+        {
+          title: 'Data Collection & Pipeline',
+          description: 'Created a custom Python script using ImageGrab and Pynput to capture synchronized gameplay frames and directional key inputs, building a dataset that was balanced and augmented to handle the game\'s high-speed dynamics.'
+        },
+        {
+          title: 'Model Architecture Research',
+          description: 'Iteratively implemented and evaluated multiple deep learning models, comparing ResNet-18, ResNet-34, and ResNet-50 architectures, and exploring CNN-LSTM hybrids to better capture temporal driving dependencies.'
+        },
+        {
+          title: 'Optimization & Training',
+          description: 'Utilized FastAI to implement advanced training strategies such as the One-Cycle Policy, Mixed Precision Training, and Dropout Regularization, significantly improving model convergence and inference speed.'
+        },
+        {
+          title: 'Real-Time Autonomous Control',
+          description: 'Deployed the trained model into a live "capture-and-drive" loop that processes game frames in real-time and maps model predictions to virtual keyboard outputs to drive the car autonomously.'
+        }
+      ]
     },
     {
-      title: 'Smart Home Energy Monitor',
-      category: 'IoT & Data Visualization',
-      summary: 'A hardware-software solution for monitoring household energy consumption. IoT sensors collect real-time usage data, which is processed and visualized on a user-friendly dashboard to help users identify high-consumption appliances and reduce costs.',
-      keyFeatures: [
-        'Programmed ESP32 microcontrollers to read current sensors and transmit data via MQTT.',
-        'Built a time-series database infrastructure to store historical consumption data.',
-        'Developed a mobile-first web application for real-time monitoring and alerts.',
-        'Implemented machine learning algorithms to predict future energy bills.'
-      ],
-      technologies: ['C++', 'MQTT', 'InfluxDB', 'Grafana', 'React Native', 'Python'],
-      links: {
-        github: "https://github.com/yourusername/project"
-      }
+      title: 'Frank de Bank - BenchMark',
+      year: '2024',
+      description: 'An innovative AI-powered "talking bench" installation developed for Rurant to gather community feedback on rural planning. As the AI Lead, I architected the conversational core using Google Gemini and FastAPI. The system engages citizens in natural, open-ended dialogues, collecting their opinions while analyzing emotional sentiment in real-time. This feedback is then processed to provide city planners with actionable insights into public sentiment regarding specific locations.',
+      tags: ['Python', 'FastAPI', 'Google Gemini AI', 'Google Cloud STT/TTS', 'Emotion Analysis', 'Docker', 'React', 'Raspberry Pi'],
+      githubUrl: 'https://github.com/egealkan/AI-Projects/tree/main/Project_4.0_Talking_Bench',
+      steps: [
+        {
+          title: 'Conversational AI Engine',
+          description: 'Integrated Google Gemini (LLM) to power context-aware, open-ended conversations, enabling the bench to ask relevant follow-up questions and maintain natural dialogue flow.'
+        },
+        {
+          title: 'Voice Processing Pipeline',
+          description: 'Developed a robust speech-to-speech system using Google Cloud STT and TTS services, capable of capturing voice input in outdoor environments and responding with natural-sounding speech.'
+        },
+        {
+          title: 'Emotion & Sentiment Analysis',
+          description: 'Implemented a dedicated emotion analyzer module to detect user sentiment during interactions, adding a layer of emotional intelligence to the gathered feedback data.'
+        },
+        {
+          title: 'Scalable Backend Architecture',
+          description: 'Built a containerized REST API using FastAPI and Docker to manage conversation sessions, audio processing, and analytics logging for the frontend interface.'
+        }
+      ]
     },
     {
-      title: 'Portfolio Website V1',
-      category: 'Web Development',
-      summary: 'The first iteration of my personal portfolio website. This project focused on mastering modern CSS techniques, responsive design principles, and performance optimization without relying on heavy frameworks.',
-      keyFeatures: [
-        'Implemented a custom responsive grid system using CSS Grid and Flexbox.',
-        'Achieved a perfect 100/100 Lighthouse performance score through asset optimization.',
-        'Created custom CSS animations for interactive elements.',
-        'Deployed via CI/CD pipeline to GitHub Pages.'
-      ],
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'GitHub Actions', 'Figma'],
+      title: 'Training Session Management System',
+      year: '2025',
+      description: 'A comprehensive web application built with PHP and Laravel to digitize the administration of student training sessions. This semester-long group project created a centralized platform for students to form teams, select topics, and communicate with clients, while empowering teachers and coordinators with granular administrative control. The system features role-based access for Students, Coaches, and Coordinators to streamline the entire academic workflow.\n\nDemo Credentials:\nStudent: test1@example.com (pw: password)\nCoach: test@example.com (pw: password\nCoordinator: test2@example.com (pw: password)',
+      tags: ['PHP', 'Laravel', 'Blade', 'MySQL', 'Tailwind CSS', 'Group Project'],
       links: {
-        github: "https://github.com/yourusername/project",
-        demo: "#"
-      }
+        demo: "https://skill2.bragi.be"
+      },
+      steps: [
+        {
+          title: 'Role-Based Access Control',
+          description: 'Architected a secure permission system that serves distinct interfaces and functionalities to three different user roles (Student, Coach, Coordinator) within the same application.'
+        },
+        {
+          title: 'Workflow Automation',
+          description: 'Digitized the manual process of topic selection and team formation, allowing students to browse opportunities and manage their groups while automating status updates and notifications.'
+        },
+        {
+          title: 'Admin Management Suite',
+          description: 'Created extensive administrative features for coordinators to manage the lifecycle of the training program, including user management, client oversight, and global system configuration.'
+        },
+        {
+          title: 'Laravel MVC Implementation',
+          description: 'Developed the application using the Model-View-Controller architecture, utilizing Laravel\'s Eloquent ORM for database interactions and Blade templating for a dynamic and responsive frontend.'
+        }
+      ]
     },
-    {
-      title: 'Social Media Sentiment Tracker',
-      category: 'Data Science',
-      summary: 'An analytical tool that scrapes public social media posts to analyze brand sentiment during product launches. The tool provides marketing teams with real-time feedback on public perception and emerging trends.',
-      keyFeatures: [
-        'Built a robust web scraper compliant with platform rate limits.',
-        'Utilized NLP libraries (NLTK/Spacy) to tokenize and classify text sentiment.',
-        'Created a Streamlit dashboard for interactive data exploration.',
-        'Implemented topic modeling to identify trending discussion themes.'
-      ],
-      technologies: ['Python', 'Selenium', 'NLTK', 'Streamlit', 'Pandas', 'Scikit-learn'],
-      links: {
-        github: "https://github.com/yourusername/project"
-      }
-    }
   ];
 
   return (
@@ -248,42 +179,78 @@ const Experience = () => {
                   <BsCodeSlash />
                 </div>
                 <div className="project-title-wrapper">
-                  <span className="project-category">{project.category}</span>
+                  {/* Handle optional category */}
+                  {project.category ? (
+                    <span className="project-category">{project.category}</span>
+                  ) : (
+                    <span className="project-category">Featured Project</span>
+                  )}
                   <h2 className="project-title">{project.title}</h2>
                 </div>
               </div>
 
               <div className="project-content">
-                <p className="project-summary">{project.summary}</p>
+                {/* Handle both description and summary fields */}
+                <p className="project-summary">{project.description || project.summary}</p>
                 
                 <div className="project-details-grid">
                   <div className="features-section">
                     <h3 className="section-heading">Key Features</h3>
                     <ul className="feature-list">
-                      {project.keyFeatures.map((feature, i) => (
-                        <li key={i} className="feature-item">{feature}</li>
-                      ))}
+                      {/* Handle structured steps from NLP project */}
+                      {project.steps ? (
+                        project.steps.map((step, i) => (
+                          <li key={i} className="feature-item">
+                            <strong>{step.title}:</strong> {step.description}
+                          </li>
+                        ))
+                      ) : (
+                        /* Handle standard string array keyFeatures */
+                        project.keyFeatures?.map((feature, i) => (
+                          <li key={i} className="feature-item">{feature}</li>
+                        ))
+                      )}
                     </ul>
                   </div>
                   
                   <div className="tech-section">
                     <h3 className="section-heading">Technologies</h3>
                     <div className="tech-tags">
-                      {project.technologies.map((tech, i) => (
+                      {/* Handle both tags and technologies fields */}
+                      {(project.tags || project.technologies)?.map((tech, i) => (
                         <span key={i} className="tech-tag">{tech}</span>
                       ))}
                     </div>
                   </div>
                 </div>
 
+                {/* PDF Presentation Viewer (Only for NLP Project) */}
+                {project.pdfUrl && (
+                  <div className="pdf-container" style={{ marginTop: '2rem', marginBottom: '1rem' }}>
+                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Project Presentation</h4>
+                    <div style={{ position: 'relative', height: '0', paddingBottom: '56.25%', border: '1px solid var(--border-color)', borderRadius: '8px', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
+                      <iframe 
+                        src={`${project.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+                        title={`${project.title} Presentation`}
+                        width="100%" 
+                        height="100%" 
+                        style={{ position: 'absolute', top: 0, left: 0 }}
+                      >
+                      </iframe>
+                    </div>
+                  </div>
+                )}
+
                 {/* Media & Links Section */}
                 <div className="project-footer">
                   <div className="project-links">
-                    {project.links?.github && (
-                      <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="link-btn github">
+                    {/* Handle GitHub Link */}
+                    {(project.githubUrl || project.links?.github) && (
+                      <a href={project.githubUrl || project.links.github} target="_blank" rel="noopener noreferrer" className="link-btn github">
                         <BsGithub /> Source Code
                       </a>
                     )}
+                    {/* Handle Demo Link */}
                     {project.links?.demo && (
                       <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="link-btn demo">
                         <BsLink45Deg /> Live Demo
@@ -291,13 +258,29 @@ const Experience = () => {
                     )}
                   </div>
 
-                  {project.links?.video && (
-                    <div className="video-preview">
-                      <div className="video-placeholder">
-                        <BsPlayCircle className="play-icon" />
-                        <span>Watch Demo</span>
+                  {/* Video Handling: Embed if videoUrl exists, otherwise use placeholder */}
+                  {project.videoUrl ? (
+                    <div className="video-showcase" style={{ width: '100%', marginTop: '1rem' }}>
+                      <div className="video-container" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, borderRadius: '8px', overflow: 'hidden' }}>
+                        <iframe
+                          src={`https://www.youtube.com/embed/${project.videoUrl.split('/').pop().replace('watch?v=', '')}`}
+                          title={`${project.title} Demo`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                        ></iframe>
                       </div>
                     </div>
+                  ) : (
+                    project.links?.video && (
+                      <div className="video-preview">
+                        <div className="video-placeholder">
+                          <BsPlayCircle className="play-icon" />
+                          <span>Watch Demo</span>
+                        </div>
+                      </div>
+                    )
                   )}
                 </div>
               </div>

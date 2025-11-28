@@ -37,7 +37,8 @@ const Internship = () => {
       "Power Apps",
       "Microsoft Entra ID",
       "SharePoint Integration",
-      "Power Automate"
+      "Power Automate",
+      "Open AI Agent Builder"
     ],
     achievements: [
       "Transformed weekly meetings from 30-minute manual data verification sessions into proactive strategic decision-making forums.",
