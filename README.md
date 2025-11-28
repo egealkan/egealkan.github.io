@@ -67,16 +67,17 @@ To run this project locally on your machine, follow these steps:
 The project is configured to deploy directly to GitHub Pages.
 
 To create a production build:
-
 ```bash
 npm run build
-
+```
 To deploy to GitHub Pages (triggers the gh-pages script):
-
+```bash
 npm run deploy
-
+```
 📝 Linting
 ESLint is configured to ensure code quality and consistency.
+```bash
 npm run lint
+```
 
 This portfolio was developed by Egemen Alkan, 2025-2026.
