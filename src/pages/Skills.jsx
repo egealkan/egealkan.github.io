@@ -9,9 +9,9 @@ const Skills = () => {
       period: '2022 - Present',
       location: 'Geel, Belgium',
       skills: {
-        'AI and data': ['Artificial Intelligence (AI)', 'Deep Learning', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Data Science', 'Big Data', 'Neural Networks', 'TensorFlow', 'Keras', 'PyTorch', 'Data Visualization', 'Data Engineering', 'AWS', 'Internet of Things (IoT)', 'Ubuntu'],
-        development: ['ASP.NET', 'React', 'Web Development', 'Front-End Development', 'SQL', 'PHP', 'C#', 'Python', 'Livewire', 'Tailwind CSS', 'Laravel', 'Object-Oriented Programming', 'JavaScript', 'SASS', 'HTML5', 'Back-End Development', 'CSS', 'HTML', 'Java', 'Spring Framework'],
-        business: ['Business Process', 'Business Intelligence (BI)', 'Qlik Sense', 'UML', 'ORM', 'Entrepreneurship', 'Microsoft 365', 'Microsoft Power BI', 'Microsoft Power Automate', 'PnP']
+        'AI and data': ['Artificial Intelligence (AI)', 'Deep Learning', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Data Science', 'Big Data', 'Neural Networks', 'TensorFlow', 'Keras', 'PyTorch', 'Data Visualization', 'Data Engineering', 'AWS', 'Microsoft Copilot Studio'],
+        development: ['ASP.NET', 'React', 'Web Development', 'Front-End Development', 'SQL', 'PHP', 'C#', 'Python', 'Livewire', 'Tailwind CSS', 'Object-Oriented Programming', 'Laravel', 'JavaScript', 'SASS', 'HTML5', 'Back-End Development', 'CSS', 'HTML', 'Internet of Things (IoT)', 'Ubuntu', 'Java', 'Spring Framework'],
+        business: ['Business Process', 'Business Intelligence (BI)', 'Qlik Sense', 'UML', 'ORM', 'Entrepreneurship', 'Microsoft 365', 'Microsoft Power BI', 'Microsoft Power Automate', 'Microsoft PowerApps', 'PnP']
       }
     },
     {
@@ -20,8 +20,8 @@ const Skills = () => {
       period: '2019 - 2022 (Not Completed)',
       location: 'Victoria, Canada',
       skills: {
-        fundamentals: ['C', 'Python', 'Statistics', 'Computer Architecture', 'Academic Writing', 'Algorithms', 'Data Structures'],
-        math: ['Discrete Mathematics', 'Calculus', 'Linear Algebra'],
+        fundamentals: ['C', 'Python', 'Java', 'Computer Architecture', 'Academic Writing', 'Algorithms', 'Data Structures'],
+        math: ['Discrete Mathematics', 'Calculus', 'Statistics', 'Linear Algebra'],
         other: ['Customer Service', 'Computer Science']
       }
     },
@@ -31,7 +31,7 @@ const Skills = () => {
         period: '2016 - 2019',
         location: 'Victoria, Canada',
         skills: {
-            'High School': ['Physics', 'Chemistry', 'Biology', 'Mathematics', 'English', 'Social Studies', 'Computer Science', 'Physical Education', 'Art', 'Music', 'Drama', 'Work Experience', 'History', 'Career Life Education']
+            'High School': ['Physics', 'Chemistry', 'Biology', 'Mathematics', 'English', 'Social Studies', 'Computer Science', 'Work Experience', 'History', 'Career Life Education']
         }
       }
   ];
