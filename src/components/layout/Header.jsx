@@ -94,7 +94,7 @@ const Header = () => {
                 Skills
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink 
                 to="/languages" 
                 className={({ isActive }) => isActive ? 'active' : ''}
@@ -102,7 +102,7 @@ const Header = () => {
               >
                 Languages
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav-item">
               <NavLink 
                 to="/education" 

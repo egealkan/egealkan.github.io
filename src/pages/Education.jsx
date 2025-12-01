@@ -1,4 +1,6 @@
 import React from 'react';
+import ReadingProgressBar from '../components/ui/ReadingProgressBar';
+import ScrollReveal from '../components/ui/ScrollReveal';
 import './Education.css';
 
 const Education = () => {
@@ -67,6 +69,7 @@ const Education = () => {
 
   return (
     <div className="education-page">
+      <ReadingProgressBar />
       <div className="container">
         <h1 className="page-title">Education & ECTS Courses</h1>
         
@@ -95,7 +98,8 @@ const Education = () => {
               
               <div className="courses-section">
                 {education.academicYears.map((yearData, yearIndex) => (
-                  <div key={yearIndex} className="academic-year">
+                  <ScrollReveal key={yearIndex}>
+                    <div className="academic-year">
                     <h3 className="year-title">{yearData.year}</h3>
                     <div className="courses-grid">
                       {yearData.courses.map((course, courseIndex) => (
@@ -105,6 +109,7 @@ const Education = () => {
                       ))}
                     </div>
                   </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </div>

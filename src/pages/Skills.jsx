@@ -1,4 +1,6 @@
 import React from 'react';
+import ReadingProgressBar from '../components/ui/ReadingProgressBar';
+import ScrollReveal from '../components/ui/ScrollReveal';
 import './Skills.css';
 
 const Skills = () => {
@@ -38,12 +40,14 @@ const Skills = () => {
 
   return (
     <div className="skills-page">
+      <ReadingProgressBar />
       <div className="container">
         <h1 className="page-title">Skills</h1>
         
         <div className="skills-timeline">
           {skillsData.map((skills, index) => (
-            <div key={index} className="skills-card">
+            <ScrollReveal key={index}>
+              <div className="skills-card">
               <div className="university-section">
                 <div className="university-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,6 +81,7 @@ const Skills = () => {
                 ))}
               </div>
             </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

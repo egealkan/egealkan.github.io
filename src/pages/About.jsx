@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import ReadingProgressBar from '../components/ui/ReadingProgressBar';
+import ScrollReveal from '../components/ui/ScrollReveal';
+import { FaLanguage } from "react-icons/fa";
 import './About.css';
 
 const About = () => {
@@ -101,6 +104,18 @@ const About = () => {
           <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" strokeWidth="2"/>
         </svg>
       )
+    },
+    {
+      category: 'Languages',
+      details: (
+        <div className="about-contact-details">
+          <p><strong>English:</strong> Fluent</p>
+          <p><strong>Turkish:</strong> Fluent</p>
+        </div>
+      ),
+      icon: (
+        <FaLanguage />
+      )
     }
   ];
 
@@ -178,10 +193,14 @@ const About = () => {
 
   return (
     <div className="about-page">
+      <ReadingProgressBar />
       <div className="container">
-        <h1 className="about-page-title">About Myself</h1>
+        <ScrollReveal>
+          <h1 className="about-page-title">About Myself</h1>
+        </ScrollReveal>
         
         {/* Professional Introduction */}
+        <ScrollReveal>
         <section className="about-intro-section">
           <div className="about-intro-card">
             <div className="about-profile-section">
@@ -210,8 +229,11 @@ const About = () => {
             </div>
           </div>
         </section>
+        </ScrollReveal>
+        
 
         {/* Soft Skills Section */}
+        <ScrollReveal>
         <section className="about-skills-section">
           <h2 className="about-section-title">Professional Soft Skills</h2>
           <p className="about-section-subtitle">Key competencies that drive my success in IT and AI development</p>
@@ -235,8 +257,11 @@ const About = () => {
             ))}
           </div>
         </section>
+        </ScrollReveal>
+        
 
         {/* Personal Information */}
+        <ScrollReveal>
         <section className="about-info-section">
           <h2 className="about-section-title">Professional Information</h2>
           
@@ -254,8 +279,11 @@ const About = () => {
             ))}
           </div>
         </section>
+        </ScrollReveal>
+        
 
         {/* Contact Form */}
+        <ScrollReveal>
         <section className="about-contact-section">
           {submitStatus === 'success' ? (
             <div className="about-contact-form">
@@ -326,6 +354,7 @@ const About = () => {
             </form>
           )}
         </section>
+        </ScrollReveal>
       </div>
     </div>
   );

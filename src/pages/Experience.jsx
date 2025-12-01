@@ -1,4 +1,6 @@
 import { BsGithub, BsPlayCircle, BsLink45Deg, BsCodeSlash } from "react-icons/bs";
+import ReadingProgressBar from '../components/ui/ReadingProgressBar';
+import ScrollReveal from '../components/ui/ScrollReveal';
 import './Experience.css';
 
 const Experience = () => {
@@ -171,6 +173,7 @@ const Experience = () => {
 
   return (
     <div className="experience-page">
+      <ReadingProgressBar />
       <div className="container">
         <h1 className="page-title">Project Showcases</h1>
         <p className="page-subtitle">
@@ -179,7 +182,8 @@ const Experience = () => {
         
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <article key={index} className="project-card">
+            <ScrollReveal key={index}>
+              <article className="project-card">
               <div className="project-header">
                 <div className="project-icon">
                   <BsCodeSlash />
@@ -298,6 +302,7 @@ const Experience = () => {
                 </div>
               </div>
             </article>
+            </ScrollReveal>
           ))}
         </div>
       </div>

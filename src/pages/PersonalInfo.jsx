@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import ReadingProgressBar from '../components/ui/ReadingProgressBar';
+import ScrollReveal from '../components/ui/ScrollReveal';
 import './PersonalInfo.css';
 
 const PersonalInfo = () => {
@@ -151,6 +153,7 @@ const PersonalInfo = () => {
 
   return (
     <div className="personal-info-page">
+      <ReadingProgressBar />
       <div className="container">
         <h1 className="page-title">Personal Information</h1>
         

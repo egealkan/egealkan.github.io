@@ -7,6 +7,8 @@ import { BsCloudDownload } from "react-icons/bs";
 import { BsEyeFill } from "react-icons/bs";
 import { BsFileEarmarkCheckFill } from "react-icons/bs";
 import { BsDatabaseFillAdd } from "react-icons/bs";
+import ReadingProgressBar from '../components/ui/ReadingProgressBar';
+import ScrollReveal from '../components/ui/ScrollReveal';
 import './Internship.css';
 
 const Internship = () => {
@@ -84,124 +86,143 @@ const Internship = () => {
 
   return (
     <div className="internship-page">
+      <ReadingProgressBar />
       <div className="container">
         <h1 className="page-title">Internship Experience</h1>
         
         <div className="internship-container">
-          <div className="internship-header">
-            <div className="internship-icon">
-              <BsDatabaseFillAdd />
-            </div>
-            
-            <div className="internship-info">
-              <h2 className="internship-title">{internshipData.title}</h2>
-              <div className="company-info">
-                <h3 className="company-name">{internshipData.company}</h3>
-                <div className="period-location">
-                  <span className="period">{internshipData.period}</span>
-                  <span className="location">{internshipData.location}</span>
+          <ScrollReveal>
+            <div className="internship-header">
+              <div className="internship-icon">
+                <BsDatabaseFillAdd />
+              </div>
+              
+              <div className="internship-info">
+                <h2 className="internship-title">{internshipData.title}</h2>
+                <div className="company-info">
+                  <h3 className="company-name">{internshipData.company}</h3>
+                  <div className="period-location">
+                    <span className="period">{internshipData.period}</span>
+                    <span className="location">{internshipData.location}</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
+          
           
           <div className="internship-content">
-            <section className="summary-section">
-              <h3 className="section-title">Summary</h3>
-              <p className="summary-text" style={{ whiteSpace: 'pre-line' }}>{internshipData.summary}</p>
-            </section>
+            <ScrollReveal>
+              <section className="summary-section">
+                <h3 className="section-title">Summary</h3>
+                <p className="summary-text" style={{ whiteSpace: 'pre-line' }}>{internshipData.summary}</p>
+              </section>
+            </ScrollReveal>
             
-            <div className="content-grid">
-              <section className="responsibilities-section">
-                <h3 className="section-title">Key Responsibilities</h3>
-                <ul className="responsibility-list">
-                  {internshipData.keyResponsibilities.map((responsibility, index) => (
-                    <li key={index} className="responsibility-item">{responsibility}</li>
+            
+            <ScrollReveal>
+              <div className="content-grid">
+                <section className="responsibilities-section">
+                  <h3 className="section-title">Key Responsibilities</h3>
+                  <ul className="responsibility-list">
+                    {internshipData.keyResponsibilities.map((responsibility, index) => (
+                      <li key={index} className="responsibility-item">{responsibility}</li>
+                    ))}
+                  </ul>
+                </section>
+                
+                <section className="technologies-section">
+                  <h3 className="section-title">Technologies Used</h3>
+                  <div className="tech-tags">
+                    {internshipData.technologiesUsed.map((tech, index) => (
+                      <span key={index} className="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                </section>
+              </div>
+            </ScrollReveal>
+            
+            
+            <ScrollReveal>
+              <section className="internship-achievements-section">
+                <h3 className="section-title">Key Achievements</h3>
+                <div className="internship-achievements-grid">
+                  {internshipData.achievements.map((achievement, index) => (
+                    <div key={index} className="internship-achievement-card">
+                      <div className="internship-achievement-number">{index + 1}</div>
+                      <p className="internship-achievement-text">{achievement}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </ScrollReveal>
+            
+
+            <ScrollReveal>
+              <section className="internship-learnings-section" style={{marginTop: '2rem'}}>
+                <h3 className="section-title">Key Takeaways & Growth</h3>
+                <ul className="responsibility-list"> {/* Reusing list style for consistency */}
+                  {internshipData.learnings.map((item, index) => (
+                    <li key={index} className="responsibility-item">{item}</li>
                   ))}
                 </ul>
               </section>
-              
-              <section className="technologies-section">
-                <h3 className="section-title">Technologies Used</h3>
-                <div className="tech-tags">
-                  {internshipData.technologiesUsed.map((tech, index) => (
-                    <span key={index} className="tech-tag">{tech}</span>
+            </ScrollReveal>
+            
+            
+            <ScrollReveal>
+              <section className="documents-section">
+                <h3 className="section-title">Supporting Documents</h3>
+                <div className="documents-list">
+                  {internshipData.documents.map((doc, index) => (
+                    <div key={index} className="document-item">
+                      <div className="document-icon">
+                        <BsFileEarmarkCheckFill />
+                      </div>
+                      <div className="document-info">
+                        <h4 className="document-name">{doc.name}</h4>
+                        <p className="document-description">{doc.description}</p>
+                      </div>
+                      <div className="document-actions">
+                        {doc.available ? (
+                          activeDocIndex === index ? (
+                            /* Render two buttons when active */
+                            <div className="action-buttons-group">
+                              <a 
+                                href={doc.fileUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="action-btn view-btn"
+                              >
+                                <BsEyeFill /> View
+                              </a>
+                              <a 
+                                href={doc.fileUrl} 
+                                download 
+                                className="action-btn download-btn"
+                              >
+                                <BsCloudDownload /> Download
+                              </a>
+                            </div>
+                          ) : (
+                            /* Render single button when inactive */
+                            <button 
+                              className="action-btn access-btn"
+                              onClick={() => setActiveDocIndex(index)}
+                            >
+                              Access File
+                            </button>
+                          )
+                        ) : (
+                          <span className="status-pending">⏳ Pending</span>
+                        )}
+                      </div>
+                    </div>
                   ))}
                 </div>
               </section>
-            </div>
+            </ScrollReveal>
             
-            <section className="internship-achievements-section">
-              <h3 className="section-title">Key Achievements</h3>
-              <div className="internship-achievements-grid">
-                {internshipData.achievements.map((achievement, index) => (
-                  <div key={index} className="internship-achievement-card">
-                    <div className="internship-achievement-number">{index + 1}</div>
-                    <p className="internship-achievement-text">{achievement}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section className="internship-learnings-section" style={{marginTop: '2rem'}}>
-              <h3 className="section-title">Key Takeaways & Growth</h3>
-              <ul className="responsibility-list"> {/* Reusing list style for consistency */}
-                {internshipData.learnings.map((item, index) => (
-                  <li key={index} className="responsibility-item">{item}</li>
-                ))}
-              </ul>
-            </section>
-            
-            <section className="documents-section">
-              <h3 className="section-title">Supporting Documents</h3>
-              <div className="documents-list">
-                {internshipData.documents.map((doc, index) => (
-                  <div key={index} className="document-item">
-                    <div className="document-icon">
-                      <BsFileEarmarkCheckFill />
-                    </div>
-                    <div className="document-info">
-                      <h4 className="document-name">{doc.name}</h4>
-                      <p className="document-description">{doc.description}</p>
-                    </div>
-                    <div className="document-actions">
-                      {doc.available ? (
-                        activeDocIndex === index ? (
-                          /* Render two buttons when active */
-                          <div className="action-buttons-group">
-                            <a 
-                              href={doc.fileUrl} 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              className="action-btn view-btn"
-                            >
-                              <BsEyeFill /> View
-                            </a>
-                            <a 
-                              href={doc.fileUrl} 
-                              download 
-                              className="action-btn download-btn"
-                            >
-                              <BsCloudDownload /> Download
-                            </a>
-                          </div>
-                        ) : (
-                          /* Render single button when inactive */
-                          <button 
-                            className="action-btn access-btn"
-                            onClick={() => setActiveDocIndex(index)}
-                          >
-                            Access File
-                          </button>
-                        )
-                      ) : (
-                        <span className="status-pending">⏳ Pending</span>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
           </div>
         </div>
       </div>

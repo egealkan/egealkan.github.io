@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ReadingProgressBar from '../components/ui/ReadingProgressBar';
+import ScrollReveal from '../components/ui/ScrollReveal';
 import './Home.css';
 
 const Home = () => {
@@ -22,17 +24,11 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      <ReadingProgressBar />
       <section className="hero-section">
         <div className="container">
           <div className="hero-content">
             <div className="hero-text">
-              {/* <div className="level-badge">
-                <span className="level-text">Level 5</span>
-                <div className="progress-bar">
-                  <div className="progress-fill" style={{ width: '70%' }}></div>
-                </div>
-              </div> */}
-              
               <h1 className="hero-title">
                 Hello, I am {typedText}
                 <span className={`cursor ${cursorBlinking ? 'blinking' : ''}`}></span>
@@ -71,7 +67,6 @@ const Home = () => {
                     className="avatar-image"
                     />
                 </div>
-                {/* Removed the placeholder lines div */}
                 </div>
             </div>
             </div>
@@ -85,7 +80,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
+      <ScrollReveal>
       <section className="achievements-section">
         <div className="container">
           <h2 className="section-title">Proud Achievements</h2>
@@ -114,6 +110,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      </ScrollReveal>
+      
     </div>
   );
 };
