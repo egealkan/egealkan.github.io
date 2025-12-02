@@ -10,6 +10,7 @@ import { BsDatabaseFillAdd } from "react-icons/bs";
 import ReadingProgressBar from '../components/ui/ReadingProgressBar';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import CodeWindow from '../components/ui/CodeWindow.jsx';
+import ChatSimulation from '../components/ui/ChatSimulation.jsx';
 import { VscFilePdf } from "react-icons/vsc";
 import './Internship.css';
 
@@ -273,6 +274,12 @@ IF (
                     </div>
                   ))}
                 </div>
+              </section>
+            </ScrollReveal>
+
+            <ScrollReveal>
+              <section className="chat-simulation-section">
+                <ChatSimulation />
               </section>
             </ScrollReveal>
             
