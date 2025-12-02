@@ -9,6 +9,8 @@ import { BsFileEarmarkCheckFill } from "react-icons/bs";
 import { BsDatabaseFillAdd } from "react-icons/bs";
 import ReadingProgressBar from '../components/ui/ReadingProgressBar';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import CodeWindow from '../components/ui/CodeWindow.jsx';
+import { VscFilePdf } from "react-icons/vsc";
 import './Internship.css';
 
 const Internship = () => {
@@ -33,7 +35,7 @@ const Internship = () => {
     ],
     technologiesUsed: [
       "Power BI",
-      "Advanced DAX", 
+      "DAX", 
       "Microsoft Copilot Studio",
       "Power Apps",
       "Microsoft Entra ID",
@@ -141,6 +143,119 @@ const Internship = () => {
                 </section>
               </div>
             </ScrollReveal>
+
+            <ScrollReveal>
+              <h3 className="section-title">DAX Code for 2 Rules</h3>
+              <div style={{ maxWidth: '800px', margin: '0 auto' }}> {/* Optional styling to center it */}
+                <CodeWindow 
+                  files={[
+                    {
+                      fileName: 'Weekly Changeovers',
+                      language: 'dax',
+                      code: `Weekly Changeovers per Resource (Rule Based) = 
+VAR ProductionLog =
+    ADDCOLUMNS (
+        'PPL1 Pivot',
+        "SetUpGroup",
+        VAR currentMaterial = RELATED ( 'VISION_Material Master'[Material] )
+        RETURN
+            CALCULATE (
+                MIN ( 'SetUp Group'[SetUp Group] ),
+                'SetUp Group'[Material] = currentMaterial
+            )
+    )
+VAR RankedLog =
+    ADDCOLUMNS (
+        ProductionLog,
+        "OrderRank", RANKX (
+            FILTER (
+                ProductionLog,
+                'PPL1 Pivot'[Resource] = EARLIER ( 'PPL1 Pivot'[Resource] )
+            ),
+            'PPL1 Pivot'[Start Date],,
+            ASC,
+            Dense
+        )
+    )
+VAR ChangeoverCount =
+    COUNTROWS (
+        FILTER (
+            RankedLog,
+            VAR CurrentResource = 'PPL1 Pivot'[Resource]
+            VAR CurrentSetup = [SetUpGroup]
+            VAR PreviousSetup =
+                MAXX (
+                    FILTER (
+                        RankedLog,
+                        'PPL1 Pivot'[Resource] = EARLIER ( 'PPL1 Pivot'[Resource] )
+                            && [OrderRank] = EARLIER ( [OrderRank] ) - 1
+                    ),
+                    [SetUpGroup]
+                )
+            VAR WorkcenterType =
+                LOOKUPVALUE (
+                    'Slicer Resource'[Workcenter],
+                    'Slicer Resource'[Resource], CurrentResource
+                )
+            VAR IsAChangeover =
+                IF (
+                    // Checks if the Workcenter is "Tubes".
+                    WorkcenterType = "Tubes",
+                    // If TRUE, compares the first 5 digits.
+                    LEFT ( CurrentSetup, 5 ) <> LEFT ( PreviousSetup, 5 ),
+                    // If FALSE (it's any other line), compares the first 8 digits.
+                    LEFT ( CurrentSetup, 8 ) <> LEFT ( PreviousSetup, 8 )
+                )
+            RETURN
+                IsAChangeover
+                    && NOT ISBLANK ( PreviousSetup )
+        )
+    )
+RETURN
+    ChangeoverCount`
+                    },
+                    {
+                      fileName: 'Duplicate Order Check',
+                      language: 'dax',
+                      code: `Duplicate Check = 
+// 1. Get the rules and data for the current row.
+//    VALUE() converts the MAXQ text value to a number for correct comparison.
+VAR MaxOrderQuantity = VALUE(RELATED('Slicer Resource'[MaxOQ]))
+VAR CurrentOrderQuantity = 'PPL1 Pivot'[Planned Quantity]
+
+// 2. The rule only applies if the current order is smaller than its MAXQ.
+RETURN
+IF (
+    CurrentOrderQuantity >= MaxOrderQuantity,
+    "OK", // Large orders are not checked for duplication.
+    (
+        // 3. If it's a "small" order, get the details needed for the duplicate check.
+        VAR CurrentOrderDate = 'PPL1 Pivot'[Start Date]
+        // THIS IS THE KEY CHANGE: We now check by Material.
+        VAR CurrentMaterial = 'PPL1 Pivot'[Product Number]
+        VAR FourWeeksPrior = CurrentOrderDate - 28
+
+        // 4. Count how many OTHER orders were planned for the SAME MATERIAL in the previous 4 weeks.
+        VAR PreviousOrderCount =
+            COUNTROWS (
+                FILTER (
+                    'PPL1 Pivot',
+                    'PPL1 Pivot'[Product Number] = CurrentMaterial &&
+                    'PPL1 Pivot'[Start Date] < CurrentOrderDate &&
+                    'PPL1 Pivot'[Start Date] >= FourWeeksPrior
+                )
+            )
+        // 5. If any previous order is found (count > 0), flag the current one as a duplicate.
+        RETURN
+            IF ( PreviousOrderCount > 0, "Duplicate", "OK" )
+    )
+)`
+                    }
+                  ]}
+                />
+              </div>
+            </ScrollReveal>
+            <ScrollReveal></ScrollReveal>
             
             
             <ScrollReveal>
@@ -177,7 +292,7 @@ const Internship = () => {
                   {internshipData.documents.map((doc, index) => (
                     <div key={index} className="document-item">
                       <div className="document-icon">
-                        <BsFileEarmarkCheckFill />
+                        <VscFilePdf />
                       </div>
                       <div className="document-info">
                         <h4 className="document-name">{doc.name}</h4>

@@ -81,7 +81,7 @@ const Home = () => {
         </div>
       </section>
 
-      <ScrollReveal>
+      
       <section className="achievements-section">
         <div className="container">
           <h2 className="section-title">Proud Achievements</h2>
@@ -110,7 +110,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      </ScrollReveal>
       
     </div>
   );
