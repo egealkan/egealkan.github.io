@@ -219,7 +219,7 @@ RETURN
                       language: 'dax',
                       code: `Duplicate Check = 
 // 1. Get the rules and data for the current row.
-//    VALUE() converts the MAXQ text value to a number for correct comparison.
+//    value converts the MAXQ text value to a number for correct comparison.
 VAR MaxOrderQuantity = VALUE(RELATED('Slicer Resource'[MaxOQ]))
 VAR CurrentOrderQuantity = 'PPL1 Pivot'[Planned Quantity]
 
@@ -229,7 +229,7 @@ IF (
     CurrentOrderQuantity >= MaxOrderQuantity,
     "OK", // Large orders are not checked for duplication.
     (
-        // 3. If it's a "small" order, get the details needed for the duplicate check.
+        // 3. If a small order, get the details needed for the duplicate check.
         VAR CurrentOrderDate = 'PPL1 Pivot'[Start Date]
         // THIS IS THE KEY CHANGE: We now check by Material.
         VAR CurrentMaterial = 'PPL1 Pivot'[Product Number]
