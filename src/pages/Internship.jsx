@@ -26,6 +26,7 @@ const Internship = () => {
       
       The primary deliverable was an Enhanced Weekly Planning Report in Power BI that serves as an automated "Violation Tracker" for 10 complex planning rules. The secondary deliverable was a high-fidelity AI Planning Assistant prototype (built in Microsoft Copilot Studio) that enables natural language queries of live production data and procedural documentation, achieving a 100% success rate in technical benchmarking.
     `,
+    daxexplanation: `A section to show the DAX code for the two most challenging rules that were implemented out of all the rules. The codes show the Weekly Changeover rule and the Duplicate Order Check rule.`,
     keyResponsibilities: [
       "Engineered an automated Power BI 'Violation Tracker' using advanced DAX logic to monitor 10 standard planning rules (e.g., Context-Aware Changeovers, Two-Step Duplicate Checks).",
       "Conducted a comprehensive technical feasibility study comparing Microsoft Copilot Studio, OpenAI, and Custom Python solutions against enterprise security requirements (Entra ID, In-Tenant Data Governance).",
@@ -145,7 +146,10 @@ const Internship = () => {
             </ScrollReveal>
 
             <ScrollReveal>
-              <h3 className="section-title">DAX Code for 2 Rules</h3>
+              <h3 className="section-title">Code Snippets</h3>
+              <section>
+                <p className="summary-text" style={{ whiteSpace: 'pre-line' }}>{internshipData.daxexplanation}</p>
+              </section>
               <div style={{ maxWidth: '800px', margin: '0 auto' }}> {/* Optional styling to center it */}
                 <CodeWindow 
                   files={[
