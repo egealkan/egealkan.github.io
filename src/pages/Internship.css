@@ -453,3 +453,19 @@
     flex: 1; /* Buttons take equal width */
   }
 }
+
+.demos-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr; /* Two equal columns */
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: start;
+  width: 100%;
+}
+
+/* Mobile Responsive Stack */
+@media (max-width: 992px) {
+  .demos-grid {
+    grid-template-columns: 1fr; /* Stack vertically on tablets/phones */
+  }
+}

@@ -27,7 +27,7 @@ const Internship = () => {
       
       The primary deliverable was an Enhanced Weekly Planning Report in Power BI that serves as an automated "Violation Tracker" for 10 complex planning rules. The secondary deliverable was a high-fidelity AI Planning Assistant prototype (built in Microsoft Copilot Studio) that enables natural language queries of live production data and procedural documentation, achieving a 100% success rate in technical benchmarking.
     `,
-    daxexplanation: `A section to show the DAX code for the two most challenging rules that were implemented out of all the rules. The codes show the Weekly Changeover rule and the Duplicate Order Check rule.`,
+    daxexplanation: `A section to show the DAX code for the two most challenging rules that were implemented out of all the rules and an example planning assistant agent. The codes show the Weekly Changeover rule and the Duplicate Order Check rule.`,
     keyResponsibilities: [
       "Engineered an automated Power BI 'Violation Tracker' using advanced DAX logic to monitor 10 standard planning rules (e.g., Context-Aware Changeovers, Two-Step Duplicate Checks).",
       "Conducted a comprehensive technical feasibility study comparing Microsoft Copilot Studio, OpenAI, and Custom Python solutions against enterprise security requirements (Entra ID, In-Tenant Data Governance).",
@@ -145,19 +145,50 @@ const Internship = () => {
                 </section>
               </div>
             </ScrollReveal>
+            
+            
+            <ScrollReveal>
+              <section className="internship-achievements-section">
+                <h3 className="section-title">Key Achievements</h3>
+                <div className="internship-achievements-grid">
+                  {internshipData.achievements.map((achievement, index) => (
+                    <div key={index} className="internship-achievement-card">
+                      <div className="internship-achievement-number">{index + 1}</div>
+                      <p className="internship-achievement-text">{achievement}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </ScrollReveal>
+            
 
             <ScrollReveal>
-              <h3 className="section-title">Code Snippets</h3>
+              <section className="internship-learnings-section" style={{marginTop: '2rem'}}>
+                <h3 className="section-title">Key Takeaways & Growth</h3>
+                <ul className="responsibility-list"> {/* Reusing list style for consistency */}
+                  {internshipData.learnings.map((item, index) => (
+                    <li key={index} className="responsibility-item">{item}</li>
+                  ))}
+                </ul>
+              </section>
+            </ScrollReveal>
+
+
+            <ScrollReveal>
+              <h3 className="section-title">Technical Demonstrations</h3>
               <section>
                 <p className="summary-text" style={{ whiteSpace: 'pre-line' }}>{internshipData.daxexplanation}</p>
               </section>
-              <div style={{ maxWidth: '800px', margin: '0 auto' }}> {/* Optional styling to center it */}
-                <CodeWindow 
-                  files={[
-                    {
-                      fileName: 'Weekly Changeovers',
-                      language: 'dax',
-                      code: `Weekly Changeovers per Resource (Rule Based) = 
+              
+              <div className="demos-grid">
+                {/* Min-width: 0 is crucial for Grid/Flex children to shrink properly */}
+                <div style={{ width: '100%', minWidth: 0 }}>
+                  <CodeWindow 
+                    files={[
+                      {
+                        fileName: 'Weekly Changeovers',
+                        language: 'dax',
+                        code: `Weekly Changeovers per Resource (Rule Based) = 
 VAR ProductionLog =
     ADDCOLUMNS (
         'PPL1 Pivot',
@@ -175,7 +206,7 @@ VAR RankedLog =
         "OrderRank", RANKX (
             FILTER (
                 ProductionLog,
-                'PPL1 Pivot'[Resource] = EARLIER ( 'PPL1 Pivot'[Resource] )
+                'PPL1 Pivot'[Resource] = EARLIER ('PPL1 Pivot'[Resource])
             ),
             'PPL1 Pivot'[Start Date],,
             ASC,
@@ -192,7 +223,7 @@ VAR ChangeoverCount =
                 MAXX (
                     FILTER (
                         RankedLog,
-                        'PPL1 Pivot'[Resource] = EARLIER ( 'PPL1 Pivot'[Resource] )
+                        'PPL1 Pivot'[Resource] = EARLIER('PPL1 Pivot'[Resource])
                             && [OrderRank] = EARLIER ( [OrderRank] ) - 1
                     ),
                     [SetUpGroup]
@@ -207,8 +238,10 @@ VAR ChangeoverCount =
                     // Checks if the Workcenter is "Tubes".
                     WorkcenterType = "Tubes",
                     // If TRUE, compares the first 5 digits.
-                    LEFT ( CurrentSetup, 5 ) <> LEFT ( PreviousSetup, 5 ),
-                    // If FALSE (it's any other line), compares the first 8 digits.
+                    LEFT ( CurrentSetup, 5 ) <> LEFT 
+                    // ( PreviousSetup, 5 ),
+                    // If FALSE (it's any other line), 
+                    // compares the first 8 digits.
                     LEFT ( CurrentSetup, 8 ) <> LEFT ( PreviousSetup, 8 )
                 )
             RETURN
@@ -218,11 +251,11 @@ VAR ChangeoverCount =
     )
 RETURN
     ChangeoverCount`
-                    },
-                    {
-                      fileName: 'Duplicate Order Check',
-                      language: 'dax',
-                      code: `Duplicate Check = 
+                      },
+                      {
+                        fileName: 'Duplicate Order Check',
+                        language: 'dax',
+                        code: `Duplicate Check = 
 // 1. Get the rules and data for the current row.
 //    value converts the MAXQ text value to a number for correct comparison.
 VAR MaxOrderQuantity = VALUE(RELATED('Slicer Resource'[MaxOQ]))
@@ -240,7 +273,8 @@ IF (
         VAR CurrentMaterial = 'PPL1 Pivot'[Product Number]
         VAR FourWeeksPrior = CurrentOrderDate - 28
 
-        // 4. Count how many OTHER orders were planned for the SAME MATERIAL in the previous 4 weeks.
+        // 4. Count how many OTHER orders were planned for the SAME MATERIAL 
+        // in the previous 4 weeks.
         VAR PreviousOrderCount =
             COUNTROWS (
                 FILTER (
@@ -250,50 +284,23 @@ IF (
                     'PPL1 Pivot'[Start Date] >= FourWeeksPrior
                 )
             )
-        // 5. If any previous order is found (count > 0), flag the current one as a duplicate.
+        // 5. If any previous order is found (count > 0), flag the 
+        // current one as a duplicate.
         RETURN
             IF ( PreviousOrderCount > 0, "Duplicate", "OK" )
     )
 )`
-                    }
-                  ]}
-                />
+                      }
+                    ]}
+                  />
+                </div>
+                
+                <div style={{ width: '100%', minWidth: 0 }}>
+                  <ChatSimulation />
+                </div>
               </div>
             </ScrollReveal>
             <ScrollReveal></ScrollReveal>
-            
-            
-            <ScrollReveal>
-              <section className="internship-achievements-section">
-                <h3 className="section-title">Key Achievements</h3>
-                <div className="internship-achievements-grid">
-                  {internshipData.achievements.map((achievement, index) => (
-                    <div key={index} className="internship-achievement-card">
-                      <div className="internship-achievement-number">{index + 1}</div>
-                      <p className="internship-achievement-text">{achievement}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            </ScrollReveal>
-
-            <ScrollReveal>
-              <section className="chat-simulation-section">
-                <ChatSimulation />
-              </section>
-            </ScrollReveal>
-            
-
-            <ScrollReveal>
-              <section className="internship-learnings-section" style={{marginTop: '2rem'}}>
-                <h3 className="section-title">Key Takeaways & Growth</h3>
-                <ul className="responsibility-list"> {/* Reusing list style for consistency */}
-                  {internshipData.learnings.map((item, index) => (
-                    <li key={index} className="responsibility-item">{item}</li>
-                  ))}
-                </ul>
-              </section>
-            </ScrollReveal>
             
             
             <ScrollReveal>

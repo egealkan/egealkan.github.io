@@ -6,7 +6,6 @@ const ChatSimulation = () => {
   const [step, setStep] = useState(0);
   const chatRef = useRef(null);
 
-  // The script of your demo
   const script = [
     { role: 'user', text: "Who is the MRP controller for material 123455789?", delay: 1000 },
     { role: 'bot', text: "Missing Parts Agent...", type: 'thinking', delay: 2000 },
@@ -24,30 +23,23 @@ const ChatSimulation = () => {
 
   useEffect(() => {
     if (step >= script.length) return;
-
     const currentAction = script[step];
-    
     const timeout = setTimeout(() => {
-      // If it's the user, add immediately
       if (currentAction.role === 'user') {
         setMessages(prev => [...prev, { role: 'user', text: currentAction.text }]);
         setStep(prev => prev + 1);
-      } 
-      // If it's the bot, show typing indicator first
-      else {
+      } else {
         setIsTyping(true);
         setTimeout(() => {
           setIsTyping(false);
           setMessages(prev => [...prev, { role: 'bot', text: currentAction.text, type: currentAction.type }]);
           setStep(prev => prev + 1);
-        }, 1500); // Bot "thinking" time
+        }, 1500);
       }
     }, currentAction.delay);
-
     return () => clearTimeout(timeout);
   }, [step]);
 
-  // Auto-scroll to bottom
   useEffect(() => {
     if (chatRef.current) chatRef.current.scrollTop = chatRef.current.scrollHeight;
   }, [messages, isTyping]);
@@ -56,21 +48,22 @@ const ChatSimulation = () => {
     <div className="chat-container">
       <style>{`
         .chat-container {
-          background: #f5f5f5; /* Light bg like Teams/Copilot */
+          background: #f5f5f5;
           border: 1px solid #ccc;
           border-radius: 10px;
           width: 100%;
-          max-width: 500px;
-          height: 400px;
+          max-width: 100%; /* Changed from 500px to 100% for mobile safety */
+          height: 400px; /* Matched height with CodeWindow */
           display: flex;
           flex-direction: column;
           font-family: 'Segoe UI', sans-serif;
-          margin: 2rem auto;
+          margin: 0;
           box-shadow: 0 4px 12px rgba(0,0,0,0.15);
           overflow: hidden;
+          box-sizing: border-box; /* Ensures padding doesn't add to width */
         }
         .chat-header {
-          background: #464775; /* Teams Purple */
+          background: #464775;
           color: white;
           padding: 10px 15px;
           font-weight: bold;
@@ -88,12 +81,13 @@ const ChatSimulation = () => {
           background: #fff;
         }
         .message {
-          max-width: 80%;
+          max-width: 85%;
           padding: 8px 12px;
           border-radius: 12px;
           font-size: 0.9rem;
           line-height: 1.4;
           animation: popIn 0.3s ease-out;
+          word-wrap: break-word; /* Prevents long words from overflowing */
         }
         .user {
           align-self: flex-end;
