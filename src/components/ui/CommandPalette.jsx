@@ -184,11 +184,11 @@ const CommandPalette = ({ isOpen, setIsOpen }) => {
           setToast({ msg: 'Email copied to clipboard!', type: 'success' });
         }
       },
+    { id: 'cv', label: 'View Resume (CV)', icon: '📄', action: () => window.open('/Egemen_Alkan_CV.pdf', '_blank') },
     { id: 'exp', label: 'Experience', icon: '💼', action: () => navigate('/experience') },
     { id: 'skills', label: 'Technical Skills', icon: '⚡', action: () => navigate('/skills') },
     { id: 'projects', label: 'Internship Projects', icon: '🚀', action: () => navigate('/internship') },
     { id: 'edu', label: 'Education', icon: '🎓', action: () => navigate('/education') },
-    { id: 'cv', label: 'View Resume (CV)', icon: '📄', action: () => window.open('/Egemen_Alkan_CV.pdf', '_blank') },
   ];
 
   const filteredCommands = commands.filter(cmd => 
