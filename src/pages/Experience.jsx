@@ -245,6 +245,9 @@ const Experience = () => {
                 {project.pdfUrl && (
                   <div className="pdf-container" style={{ marginTop: '2rem', marginBottom: '1rem' }}>
                     <h4 style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Project Presentation</h4>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', fontStyle: 'italic', opacity: 0.7 }}>
+                        (Preview may take a moment to load. If it doesn't load, please refresh the page.)
+                    </span>
                     <div style={{ position: 'relative', height: '0', paddingBottom: '56.25%', border: '1px solid var(--border-color)', borderRadius: '8px', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
                       <iframe 
                         // src={`${project.pdfUrl}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
