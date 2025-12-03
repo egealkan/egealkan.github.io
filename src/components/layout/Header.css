@@ -188,4 +188,9 @@
     font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
   }
+
+  .nav-item a.active::after {
+    left: var(--spacing-md); 
+    transform: none;         
+  }
 }

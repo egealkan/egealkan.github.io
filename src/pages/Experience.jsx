@@ -247,7 +247,7 @@ const Experience = () => {
                     <h4 style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Project Presentation</h4>
                     <div style={{ position: 'relative', height: '0', paddingBottom: '56.25%', border: '1px solid var(--border-color)', borderRadius: '8px', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
                       <iframe 
-                        src={`${project.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+                        src={`${project.pdfUrl}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
                         title={`${project.title} Presentation`}
                         width="100%" 
                         height="100%" 
