@@ -12,6 +12,7 @@ import ScrollReveal from '../components/ui/ScrollReveal';
 import CodeWindow from '../components/ui/CodeWindow.jsx';
 import ChatSimulation from '../components/ui/ChatSimulation.jsx';
 import { VscFilePdf } from "react-icons/vsc";
+import DocumentGate from '../components/auth/DocumentGate';
 import './Internship.css';
 
 const Internship = () => {
@@ -306,6 +307,7 @@ IF (
             <ScrollReveal>
               <section className="documents-section">
                 <h3 className="section-title">Supporting Documents</h3>
+                <DocumentGate title="Restricted Documents">
                 <div className="documents-list">
                   {internshipData.documents.map((doc, index) => (
                     <div key={index} className="document-item">
@@ -353,6 +355,7 @@ IF (
                     </div>
                   ))}
                 </div>
+                </DocumentGate>
               </section>
             </ScrollReveal>
             
