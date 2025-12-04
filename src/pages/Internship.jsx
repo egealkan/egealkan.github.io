@@ -5,7 +5,6 @@
 import { useState } from 'react';
 import { BsCloudDownload } from "react-icons/bs";
 import { BsEyeFill } from "react-icons/bs";
-import { BsFileEarmarkCheckFill } from "react-icons/bs";
 import { BsDatabaseFillAdd } from "react-icons/bs";
 import ReadingProgressBar from '../components/ui/ReadingProgressBar';
 import ScrollReveal from '../components/ui/ScrollReveal';
@@ -13,9 +12,11 @@ import CodeWindow from '../components/ui/CodeWindow.jsx';
 import ChatSimulation from '../components/ui/ChatSimulation.jsx';
 import { VscFilePdf } from "react-icons/vsc";
 import DocumentGate from '../components/auth/DocumentGate';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 import './Internship.css';
 
 const Internship = () => {
+  useDocumentTitle('Internship');
   const [activeDocIndex, setActiveDocIndex] = useState(null);
   
   const internshipData = {

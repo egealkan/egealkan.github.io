@@ -1,6 +1,8 @@
+import useDocumentTitle from '../hooks/useDocumentTitle';
 import './Languages.css';
 
 const Languages = () => {
+  useDocumentTitle('Languages');
   const languagesData = [
     {
       language: 'English',

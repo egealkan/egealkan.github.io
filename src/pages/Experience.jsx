@@ -1,9 +1,11 @@
 import { BsGithub, BsPlayCircle, BsLink45Deg, BsCodeSlash } from "react-icons/bs";
 import ReadingProgressBar from '../components/ui/ReadingProgressBar';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 import './Experience.css';
 
 const Experience = () => {
+  useDocumentTitle('Projects');
   const projects = [
     {
       title: 'Deep Learning NLP Challenge',

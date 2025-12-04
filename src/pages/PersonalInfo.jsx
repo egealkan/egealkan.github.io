@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import ReadingProgressBar from '../components/ui/ReadingProgressBar';
-import ScrollReveal from '../components/ui/ScrollReveal';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 import './PersonalInfo.css';
 
 const PersonalInfo = () => {
+  useDocumentTitle('Personal Info');
   const [formData, setFormData] = useState({
     name: '',
     email: '',

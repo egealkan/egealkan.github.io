@@ -1,9 +1,11 @@
 import React from 'react';
 import ReadingProgressBar from '../components/ui/ReadingProgressBar';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 import './Skills.css';
 
 const Skills = () => {
+  useDocumentTitle('Skills');
   const skillsData = [
     {
       university: 'Thomas More University',

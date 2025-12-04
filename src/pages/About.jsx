@@ -2,9 +2,11 @@ import { useState } from 'react';
 import ReadingProgressBar from '../components/ui/ReadingProgressBar';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import { FaLanguage } from "react-icons/fa";
+import useDocumentTitle from '../hooks/useDocumentTitle';
 import './About.css';
 
 const About = () => {
+  useDocumentTitle('About');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
