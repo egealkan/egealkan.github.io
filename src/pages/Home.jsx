@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ReadingProgressBar from '../components/ui/ReadingProgressBar';
-import useDocumentTitle from '../hooks/useDocumentTitle';
+// import useDocumentTitle from '../hooks/useDocumentTitle';
 import './Home.css';
 
 const Home = () => {
-  useDocumentTitle('Home');
+  // useDocumentTitle('Home');
   const [typedText, setTypedText] = useState('');
   const [cursorBlinking, setCursorBlinking] = useState(true);
   const fullName = 'Egemen Alkan';
