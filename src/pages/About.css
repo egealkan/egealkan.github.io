@@ -7,7 +7,7 @@
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--color-midnight-blue);
+  color: var(--color-heading-text);
 }
 
 /* Introduction Section */
@@ -51,12 +51,12 @@
 .about-intro-title {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: var(--color-midnight-blue);
+  color: var(--color-heading-text);
   font-weight: 700;
 }
 
 .about-intro-description {
-  color: var(--color-heading-text);
+  color: var(--color-primary-text);
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1rem;
@@ -72,13 +72,13 @@
   font-size: 2rem;
   text-align: center;
   margin-bottom: 1rem;
-  color: var(--color-midnight-blue);
+  color: var(--color-heading-text);
   font-weight: 700;
 }
 
 .about-section-subtitle {
   text-align: center;
-  color: var(--color-mustard-yellow);
+  color: var(--color-heading-text);
   font-size: 1.1rem;
   margin-bottom: 2.5rem;
   font-weight: 500;
@@ -93,17 +93,17 @@
 }
 
 .about-skill-card {
-  background-color: var(--color-white);
+  background-color: var(--color-card-background);
   border-radius: var(--border-radius-md);
   padding: 1.5rem;
-  border: 2px solid var(--color-midnight-blue);
+  border: 2px solid var(--color-heading-text);
   transition: var(--transition-standard);
 }
 
 .about-skill-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(28, 45, 99, 0.15);
-  border-color: var(--color-mustard-yellow);
+  border-color: var(--color-secondary-accent);
 }
 
 .about-skill-header {
@@ -116,18 +116,18 @@
 .about-skill-icon {
   width: 50px;
   height: 50px;
-  background-color: var(--color-midnight-blue);
+  background-color: var(--color-heading-text);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-mustard-yellow);
+  color: var(--color-secondary-accent);
   flex-shrink: 0;
 }
 
 .about-skill-category {
   font-size: 1.2rem;
-  color: var(--color-midnight-blue);
+  color: var(--color-heading-text);
   margin: 0;
   font-weight: 600;
 }
@@ -140,7 +140,7 @@
 
 .about-skill-item {
   padding: 0.5rem 0;
-  color: var(--color-heading-text) !important;
+  color: var(--color-primary-text);
   font-weight: 500;
   position: relative;
   padding-left: 1.5rem;
@@ -151,7 +151,7 @@
   content: "▶";
   position: absolute;
   left: 0;
-  color: var(--color-heading-text);
+  color: var(--color-primary-text);
   font-size: 0.8rem;
 }
 
@@ -177,13 +177,13 @@
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   transition: var(--transition-standard);
-  border: 2px solid var(--color-midnight-blue);
+  border: 2px solid var(--color-heading-text);
 }
 
 .about-info-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(28, 45, 99, 0.1);
-  border-color: var(--color-mustard-yellow);
+  border-color: var(--color-secondary-accent);
 }
 
 .about-info-icon {
@@ -202,7 +202,7 @@
 .about-info-category {
   font-size: 1.2rem;
   margin: 0 0 0.5rem;
-  color: var(--color-midnight-blue);
+  color: var(--color-primary-text);
   font-weight: 600;
 }
 
@@ -220,14 +220,14 @@
 .about-linkedin-link {
   display: flex;
   align-items: center;
-  color: var(--color-midnight-blue);
+  color: var(--color-heading-text);
   transition: color 0.3s ease;
   margin-top: 0.5rem;
   font-weight: 600;
 }
 
 .about-linkedin-link:hover {
-  color: var(--color-mustard-yellow);
+  color: var(--color-secondary-accent);
 }
 
 /* Contact Section */
@@ -240,7 +240,7 @@
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  color: var(--color-midnight-blue);
+  color: var(--color-heading-text);
   font-weight: 700;
 }
 
@@ -248,7 +248,7 @@
   background-color: var(--color-card-background);
   border-radius: var(--border-radius-md);
   padding: 2rem;
-  border: 2px solid var(--color-midnight-blue);
+  border: 2px solid var(--color-heading-text);
 }
 
 .about-form-group {
@@ -259,7 +259,7 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: var(--color-midnight-blue);
+  color: var(--color-heading-text);
 }
 
 .about-form-group input,
@@ -349,7 +349,7 @@
 }
 
 .about-contact-details strong {
-  color: var(--color-midnight-blue);
+  color: var(--color-primary-text);  
 }
 
 /* Responsive Design */

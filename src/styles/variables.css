@@ -1,5 +1,5 @@
 :root {
-  /* Color Palette - Correct Hex Codes */
+  /* --- 1. Primitive Color Palette (The raw colors) --- */
   --color-white: #FFFFFF;
   --color-midnight-blue: #00022d;
   --color-dim-gray: #36454f;
@@ -7,33 +7,53 @@
   --color-dark-blue: #1c2d63;
   --color-mustard-yellow: #cab955df;
   
-  /* Semantic Color Assignments */
+  /* --- 2. Default (Light Mode) Assignments --- */
   --color-background: var(--color-white);
   --color-card-background: var(--color-light-cream);
+  
   --color-primary-text: var(--color-dim-gray);
   --color-heading-text: var(--color-midnight-blue);
-  --color-primary-accent: var(--color-dark-blue);
+  
+  --color-primary-accent: var(--color-dark-blue);   /* Pop color in light mode */
   --color-secondary-accent: var(--color-mustard-yellow);
+  
   --color-border: rgba(54, 69, 79, 0.2);
   --color-hover: rgba(28, 45, 99, 0.05);
   
-  /* Font families */
+  /* Fonts & Spacing (Unchanged) */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'Fira Code', 'JetBrains Mono', monospace;
-  
-  /* Spacing */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-xxl: 3rem;
-  
-  /* Transitions */
   --transition-standard: all 0.3s ease;
-  
-  /* Border radius */
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 12px;
+}
+
+/* --- 3. Dark Mode Overrides --- */
+[data-theme="dark"] {
+  /* Swap background to Midnight Blue */
+  --color-background: var(--color-midnight-blue);
+  
+  /* Cards become slightly lighter than background (Dark Blue) */
+  --color-card-background: var(--color-dark-blue);
+  
+  /* Text becomes Light Cream for readability */
+  --color-primary-text: var(--color-light-cream);
+  
+  /* Headings & Accents become Gold/Yellow to "pop" */
+  --color-heading-text: var(--color-mustard-yellow);
+  --color-primary-accent: var(--color-mustard-yellow);
+  
+  /* Secondary accent becomes white for contrast */
+  --color-secondary-accent: var(--color-white);
+  
+  /* Adjust borders and hovers for dark background */
+  --color-border: rgba(247, 247, 235, 0.2);
+  --color-hover: rgba(202, 185, 85, 0.15);
 }

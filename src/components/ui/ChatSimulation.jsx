@@ -48,8 +48,8 @@ const ChatSimulation = () => {
     <div className="chat-container">
       <style>{`
         .chat-container {
-          background: #f5f5f5;
-          border: 1px solid #ccc;
+          background: var(--color-background);
+          border: 1px solid var(--color-primary-accent);
           border-radius: 10px;
           width: 100%;
           max-width: 100%; /* Changed from 500px to 100% for mobile safety */
@@ -78,7 +78,7 @@ const ChatSimulation = () => {
           display: flex;
           flex-direction: column;
           gap: 10px;
-          background: #fff;
+          background-color: var(--color-background);
         }
         .message {
           max-width: 85%;
@@ -103,7 +103,7 @@ const ChatSimulation = () => {
         }
         .thinking {
           font-style: italic;
-          color: #666;
+          color: var(--color-primary-text);
           font-size: 0.8rem;
           background: transparent;
         }
@@ -116,13 +116,13 @@ const ChatSimulation = () => {
         .chat-footer {
           padding: 10px;
           border-top: 1px solid #eee;
-          background: #f9f9f9;
+          background-color: var(--color-background);
         }
         .fake-input {
           width: 100%;
           height: 30px;
-          background: white;
-          border: 1px solid #ddd;
+          background-color: var(--color-background);
+          border: 1px solid var(--color-primary-accent);
           border-radius: 4px;
         }
         @keyframes popIn {

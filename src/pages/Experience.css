@@ -15,7 +15,7 @@
 
 .page-subtitle {
   text-align: center;
-  color: var(--color-dim-gray);
+  color: var(--color-primary-text);
   max-width: 700px;
   margin: 0 auto 4rem;
   font-size: 1.1rem;
@@ -59,7 +59,7 @@
 .project-icon {
   width: 50px;
   height: 50px;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -94,6 +94,7 @@
 /* Content Body */
 .project-content {
   padding: 2.5rem;
+  background-color: var(--color-card-background);
 }
 
 .project-summary {
@@ -134,12 +135,12 @@
   margin-bottom: 0.8rem;
   line-height: 1.5;
   font-size: 0.95rem;
-  color: var(--color-dim-gray);
+  color: var(--color-primary-text);
 }
 
 .feature-item::before {
   content: "•";
-  color: var(--color-primary-accent);
+  color: var(--color-primary-text);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -156,7 +157,7 @@
 }
 
 .tech-tag {
-  background-color: var(--color-hover);
+  background-color: var(--color-background);
   color: var(--color-primary-accent);
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
@@ -167,7 +168,7 @@
 }
 
 .tech-tag:hover {
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-color: var(--color-primary-accent);
   transform: translateY(-2px);
 }
@@ -218,7 +219,7 @@
 }
 
 .link-btn.demo {
-  background-color: var(--color-white);
+  background-color: var(--color-card-background);
   color: var(--color-primary-accent);
   border: 1px solid var(--color-primary-accent);
 }

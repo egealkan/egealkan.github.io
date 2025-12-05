@@ -1,8 +1,10 @@
 // import { useState, useEffect } from 'react';
 // import { NavLink } from 'react-router-dom';
+// import { BsSearch } from "react-icons/bs"; 
 // import './Header.css';
 
-// const Header = () => {
+// // Accept onOpenPalette prop
+// const Header = ({ onOpenPalette }) => {
 //   const [isMenuOpen, setIsMenuOpen] = useState(false);
 //   const [scrolled, setScrolled] = useState(false);
 
@@ -45,6 +47,14 @@
 //         <div className="logo">
 //           <NavLink to="/">EA</NavLink>
 //           <div className="logo-effect"></div>
+//         </div>
+
+//         <div className="search-trigger" onClick={onOpenPalette}>
+//           <BsSearch className="search-icon" />
+//           <span className="search-text">Search...</span>
+//           <div className="shortcut-hint">
+//             <kbd>Ctrl</kbd> <kbd>K</kbd>
+//           </div>
 //         </div>
         
 //         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
@@ -147,14 +157,13 @@
 
 
 
-
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { BsSearch } from "react-icons/bs"; 
+import { BsSearch, BsSun, BsMoon } from "react-icons/bs"; 
 import './Header.css';
 
-// Accept onOpenPalette prop
-const Header = ({ onOpenPalette }) => {
+// Accept theme and toggleTheme props
+const Header = ({ onOpenPalette, theme, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -180,7 +189,6 @@ const Header = ({ onOpenPalette }) => {
 
   const handleDownloadCV = (e) => {
     e.preventDefault();
-    
     if (window.confirm("Are you sure you want to download Egemen's CV?")) {
       const link = document.createElement('a');
       link.href = '/Egemen_Alkan_CV.pdf';
@@ -254,15 +262,6 @@ const Header = ({ onOpenPalette }) => {
                 Skills
               </NavLink>
             </li>
-            {/* <li className="nav-item">
-              <NavLink 
-                to="/languages" 
-                className={({ isActive }) => isActive ? 'active' : ''}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Languages
-              </NavLink>
-            </li> */}
             <li className="nav-item">
               <NavLink 
                 to="/education" 
@@ -272,19 +271,20 @@ const Header = ({ onOpenPalette }) => {
                 Education
               </NavLink>
             </li>
-            {/* <li className="nav-item">
-              <NavLink 
-                to="/personal-info" 
-                className={({ isActive }) => isActive ? 'active' : ''}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Personal Info
-              </NavLink>
-            </li> */}
           </ul>
         </nav>
         
         <div className="header-actions">
+          {/* Theme Toggle Button */}
+          <button 
+            onClick={toggleTheme} 
+            className="btn btn-outline theme-toggle-btn"
+            aria-label="Toggle Dark Mode"
+            style={{ padding: '0.6rem', display: 'flex', alignItems: 'center' }}
+          >
+            {theme === 'light' ? <BsMoon size={18} /> : <BsSun size={18} />}
+          </button>
+
           <button onClick={handleDownloadCV} className="btn btn-primary download-btn">Download CV</button>
         </div>
         
@@ -299,4 +299,3 @@ const Header = ({ onOpenPalette }) => {
 };
 
 export default Header;
-
