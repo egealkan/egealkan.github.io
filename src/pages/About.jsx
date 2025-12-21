@@ -78,7 +78,7 @@ const About = () => {
       category: 'Contact Details',
       details: (
         <div className="about-contact-details">
-          <p><strong>Email:</strong> egemenalkan90@gmail.com</p>
+          <p><strong>Email:</strong> r0913387@student.thomasmore.be</p>
           <p><strong>Address:</strong> Geel Belgium</p>
           <a href="https://linkedin.com/in/egemen-alkan" target="_blank" rel="noopener noreferrer" className="about-linkedin-link">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginRight: '8px'}}>
