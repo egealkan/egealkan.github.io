@@ -20,11 +20,7 @@ const About = () => {
     {
       category: 'Communication & Leadership',
       skills: [
-        'Clear technical communication with stakeholders',
-        'Team collaboration and cross-functional coordination',
-        'Mentoring junior developers and peers',
-        'Presenting complex AI concepts to non-technical audiences',
-        'Active listening and feedback incorporation'
+        'Specialized in bridging the gap between complex technical logic and human understanding, translating intricate AI concepts for non-technical stakeholders while fostering team growth through peer mentoring and active, open collaboration.'
       ],
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,11 +34,7 @@ const About = () => {
     {
       category: 'Problem Solving & Innovation',
       skills: [
-        'Breaking down complex problems into manageable components',
-        'Creative thinking for AI solution design',
-        'Research and rapid learning of new technologies',
-        'Analytical thinking and data-driven decision making',
-        'Adaptability to changing project requirements'
+        'Driven by a curiosity to deconstruct ambiguous problems into manageable, data-driven solutions, leveraging analytical thinking and rapid learning to adapt to evolving AI technologies and project requirements.'
       ],
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,11 +46,7 @@ const About = () => {
     {
       category: 'Project Management & Organization',
       skills: [
-        'Time management and meeting project deadlines',
-        'Prioritizing tasks in multi-project environments',
-        'Documentation and knowledge sharing',
-        'Quality assurance and attention to detail',
-        'Agile methodology and iterative development'
+        'Committed to delivering high-quality, sustainable software by balancing agile adaptability with disciplined organization, ensuring projects are well-documented, meticulously tested, and executed on time.'
       ],
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

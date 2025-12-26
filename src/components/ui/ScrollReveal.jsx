@@ -4,10 +4,20 @@ const ScrollReveal = ({ children, threshold = 0.1 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef();
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setIsVisible(entry.isIntersecting));
-    }, { threshold });
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(entries => {
+  //     entries.forEach(entry => setIsVisible(entry.isIntersecting));
+  //   }, { threshold });
+    useEffect(() => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          // CHANGE: Only set to true, and unobserve once visible to prevent hiding again
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold });
 
     const currentElement = domRef.current;
     if (currentElement) observer.observe(currentElement);
