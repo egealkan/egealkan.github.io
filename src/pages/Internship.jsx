@@ -77,7 +77,7 @@ const Internship = () => {
       },
       {
         name: "Internship Realisation",
-        description: "Comprehensive 87-page technical report detailing DAX logic and AI implementation.", 
+        description: "Comprehensive technical report detailing the entire DAX logic and AI implementation.", 
         available: true,
         fileUrl: "/documents/Internship Realisation Document.pdf"
       },
