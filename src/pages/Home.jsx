@@ -36,23 +36,20 @@ const Home = () => {
               </h1>
               
               <h2 className="hero-subtitle">
-                Aspiring AI Developer / Data Engineer
+              AI Developer & Data Engineer | Graduation Portfolio
               </h2>
               
               <p className="hero-description">
-                Dedicated university student with a passion for AI and Deep Learning. Experienced
-                in coding, problem-solving, and team management, I've been a part of academic and volunteer
-                projects to deliver impactful results.
+              This portfolio represents the culmination of my Bachelor in Applied Computer Science. 
+              It showcases my journey from a student developer to a data consultant, featuring my 
+              work at Estée Lauder where I transformed production planning through automated 
+              intelligence and high-fidelity AI prototypes as well as other projects I have completed.
               </p>
               
               <div className="hero-buttons">
+                <Link to="/internship" className="btn btn-secondary">Internship</Link>
                 <Link to="/experience" className="btn btn-primary">View Projects</Link>
-                <Link to="/skills" className="btn btn-secondary">
-                  Explore Skills
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </Link>
+                <Link to="/skills" className="btn btn-secondary">Explore Skills</Link>
               </div>
             </div>
             
@@ -74,12 +71,12 @@ const Home = () => {
           </div>
         </div>
         
-        <div className="scroll-indicator">
+        {/* <div className="scroll-indicator">
           <span className="scroll-text">Scroll to explore</span>
           <div className="mouse-icon">
             <div className="mouse-wheel"></div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       

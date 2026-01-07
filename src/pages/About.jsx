@@ -20,7 +20,7 @@ const About = () => {
     {
       category: 'Communication & Leadership',
       skills: [
-        'Specialized in bridging the gap between complex technical logic and human understanding, translating intricate AI concepts for non-technical stakeholders while fostering team growth through peer mentoring and active, open collaboration.'
+        'I am specialized in bridging the gap between complex technical logic and human understanding, translating intricate AI concepts for non-technical stakeholders while fostering team growth through peer mentoring and active, open collaboration.'
       ],
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +34,7 @@ const About = () => {
     {
       category: 'Problem Solving & Innovation',
       skills: [
-        'Driven by a curiosity to deconstruct ambiguous problems into manageable, data-driven solutions, leveraging analytical thinking and rapid learning to adapt to evolving AI technologies and project requirements.'
+        'I am driven by a curiosity to deconstruct ambiguous problems into manageable, data-driven solutions, leveraging analytical thinking and rapid learning to adapt to evolving AI technologies and project requirements.'
       ],
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@ const About = () => {
     {
       category: 'Project Management & Organization',
       skills: [
-        'Committed to delivering high-quality, sustainable software by balancing agile adaptability with disciplined organization, ensuring projects are well-documented, meticulously tested, and executed on time.'
+        'I am committed to delivering high-quality, sustainable software by balancing agile adaptability with disciplined organization, ensuring projects are well-documented, meticulously tested, and executed on time.'
       ],
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,14 +84,24 @@ const About = () => {
         </svg>
       )
     },
+    // {
+    //   category: 'Work Preference',
+    //   details: 'Open to all work arrangements including remote, hybrid, and on-site positions. Interested in AI/ML roles, data engineering positions, and full-stack development opportunities.',
+    //   icon: (
+    //     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    //       <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+    //       <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" strokeWidth="2"/>
+    //       <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" strokeWidth="2"/>
+    //     </svg>
+    //   )
+    // },
     {
-      category: 'Work Preference',
-      details: 'Open to all work arrangements including remote, hybrid, and on-site positions. Interested in AI/ML roles, data engineering positions, and full-stack development opportunities.',
+      category: 'Future Aspirations',
+      details: 'Upon graduation, I intend to pursue a Master’s degree in Artificial Intelligence to deepen my expertise in Deep Learning. I am driven by the challenge of moving beyond standard data models to build complex, context-aware AI systems that solve real-world industrial bottlenecks.',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
-          <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" strokeWidth="2"/>
-          <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" strokeWidth="2"/>
+          <path d="M22 10L12 5L2 10L12 15L22 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M6 12V17C6 17 7 20 12 20C17 20 18 17 18 17V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       )
     },
@@ -105,6 +115,27 @@ const About = () => {
       ),
       icon: (
         <FaLanguage />
+      )
+    },
+    {
+      category: 'Interests & Values',
+      details: (
+        <div className="about-contact-details">
+          <p>
+            <strong>Strategic Interests:</strong> I am a keen follower of <strong>Formula 1</strong>, where I admire the 
+            seamless integration of real-time data analytics and high-performance engineering.
+          </p>
+          <p>
+            <strong>Team Dynamics:</strong> Playing and watching <strong>basketball and football</strong> has instilled in me a deep appreciation 
+            for teamwork, resilience, and the importance of split-second strategic decision-making.
+          </p>
+        </div>
+      ),
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+          <path d="M12 8V12L15 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
       )
     }
   ];
@@ -205,7 +236,7 @@ const About = () => {
               <div className="about-intro-content">
                 <h2 className="about-intro-title">Aspiring AI Developer & Data Engineer</h2>
                 <p className="about-intro-description">
-                  I'm a dedicated Applied Computer Science student specializing in Artificial Intelligence at Thomas More University. 
+                  I am a dedicated Applied Computer Science student specializing in Artificial Intelligence at Thomas More University. 
                   With a passion for leveraging AI technologies to solve complex problems, I focus on machine learning, deep learning, 
                   and data science applications that deliver real-world impact.
                 </p>
@@ -267,6 +298,33 @@ const About = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+        </ScrollReveal>
+
+
+        {/* Curriculum Vitae Viewer */}
+        <ScrollReveal>
+        <section className="about-cv-section" style={{ marginBottom: '4rem' }}>
+          <h2 className="about-section-title">Curriculum Vitae</h2>
+          <p className="about-section-subtitle">A comprehensive overview of my academic and professional journey</p>
+          
+          <div className="about-cv-container">
+            <div className="pdf-container" style={{ marginTop: '1rem', marginBottom: '1rem' }}>
+              <span style={{ fontSize: '0.8rem', color: 'var(--color-primary-text)', fontStyle: 'italic', opacity: 0.7, display: 'block', textAlign: 'center', marginBottom: '0.5rem' }}>
+                  (Preview may take a moment to load. If it doesn't load, please refresh the page.)
+              </span>
+              <div style={{ position: 'relative', height: '0', paddingBottom: '50%', border: '2px solid var(--color-heading-text)', borderRadius: '8px', overflow: 'hidden', background: 'var(--color-card-background)' }}>
+                <iframe 
+                  src={`https://docs.google.com/viewer?url=${encodeURIComponent('https://egealkan.github.io/Egemen_Alkan_CV.pdf')}&embedded=true`}
+                  title="Egemen Alkan CV"
+                  width="100%" 
+                  height="100%" 
+                  style={{ position: 'absolute', top: 0, left: 0, border: 'none' }}
+                >
+                </iframe>
+              </div>
+            </div>
           </div>
         </section>
         </ScrollReveal>
